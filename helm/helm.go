@@ -3,10 +3,10 @@ package helm
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/hashicorp/cdktf-provider-helm-go/helm/jsii"
+	_init_ "github.com/hashicorp/cdktf-provider-helm-go/helm/v2/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/hashicorp/cdktf-provider-helm-go/helm/internal"
+	"github.com/hashicorp/cdktf-provider-helm-go/helm/v2/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -52,6 +52,10 @@ type DataHelmTemplate interface {
 	DisableWebhooks() interface{}
 	SetDisableWebhooks(val interface{})
 	DisableWebhooksInput() interface{}
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -471,6 +475,16 @@ func (j *jsiiProxy_DataHelmTemplate) DisableWebhooksInput() interface{} {
 	_jsii_.Get(
 		j,
 		"disableWebhooksInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHelmTemplate) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -1341,6 +1355,14 @@ func (j *jsiiProxy_DataHelmTemplate) SetDisableWebhooks(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_DataHelmTemplate) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataHelmTemplate) SetId(val *string) {
 	_jsii_.Set(
 		j,
@@ -2192,13 +2214,19 @@ func (d *jsiiProxy_DataHelmTemplate) ToTerraform() interface{} {
 
 type DataHelmTemplateConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Chart name to be installed. A path may be used.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#chart DataHelmTemplate#chart}
@@ -5643,6 +5671,10 @@ type Release interface {
 	SetCleanupOnFail(val interface{})
 	CleanupOnFailInput() interface{}
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -5676,6 +5708,10 @@ type Release interface {
 	ForceUpdate() interface{}
 	SetForceUpdate(val interface{})
 	ForceUpdateInput() interface{}
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -5715,6 +5751,10 @@ type Release interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	RecreatePods() interface{}
@@ -5935,6 +5975,16 @@ func (j *jsiiProxy_Release) CleanupOnFailInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Release) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Release) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -6120,6 +6170,16 @@ func (j *jsiiProxy_Release) ForceUpdateInput() interface{} {
 	_jsii_.Get(
 		j,
 		"forceUpdateInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -6350,6 +6410,16 @@ func (j *jsiiProxy_Release) Provider() cdktf.TerraformProvider {
 	_jsii_.Get(
 		j,
 		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
 		&returns,
 	)
 	return returns
@@ -6856,6 +6926,14 @@ func (j *jsiiProxy_Release) SetCleanupOnFail(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Release) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Release) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -6936,6 +7014,14 @@ func (j *jsiiProxy_Release) SetForceUpdate(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Release) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Release) SetId(val *string) {
 	_jsii_.Set(
 		j,
@@ -7004,6 +7090,14 @@ func (j *jsiiProxy_Release) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Release) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -7723,13 +7817,19 @@ func (r *jsiiProxy_Release) ToTerraform() interface{} {
 
 type ReleaseConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Chart name to be installed. A path may be used.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#chart Release#chart}
