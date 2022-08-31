@@ -99,6 +99,9 @@ func (j *jsiiProxy_ReleaseMetadataList) WrapsSet() *bool {
 func NewReleaseMetadataList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ReleaseMetadataList {
 	_init_.Initialize()
 
+	if err := validateNewReleaseMetadataListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ReleaseMetadataList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewReleaseMetadataList_Override(r ReleaseMetadataList, terraformResource cd
 	)
 }
 
-func (j *jsiiProxy_ReleaseMetadataList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ReleaseMetadataList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_ReleaseMetadataList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ReleaseMetadataList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ReleaseMetadataList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_ReleaseMetadataList) SetTerraformResource(val cdktf.IInterpol
 	)
 }
 
-func (j *jsiiProxy_ReleaseMetadataList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ReleaseMetadataList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (r *jsiiProxy_ReleaseMetadataList) ComputeFqn() *string {
 }
 
 func (r *jsiiProxy_ReleaseMetadataList) Get(index *float64) ReleaseMetadataOutputReference {
+	if err := r.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ReleaseMetadataOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (r *jsiiProxy_ReleaseMetadataList) Get(index *float64) ReleaseMetadataOutpu
 }
 
 func (r *jsiiProxy_ReleaseMetadataList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

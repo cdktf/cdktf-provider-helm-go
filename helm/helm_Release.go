@@ -1234,6 +1234,9 @@ func (j *jsiiProxy_Release) WaitInput() interface{} {
 func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) Release {
 	_init_.Initialize()
 
+	if err := validateNewReleaseParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_Release{}
 
 	_jsii_.Create(
@@ -1256,7 +1259,10 @@ func NewRelease_Override(r Release, scope constructs.Construct, id *string, conf
 	)
 }
 
-func (j *jsiiProxy_Release) SetAtomic(val interface{}) {
+func (j *jsiiProxy_Release)SetAtomic(val interface{}) {
+	if err := j.validateSetAtomicParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"atomic",
@@ -1264,7 +1270,10 @@ func (j *jsiiProxy_Release) SetAtomic(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetChart(val *string) {
+func (j *jsiiProxy_Release)SetChart(val *string) {
+	if err := j.validateSetChartParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"chart",
@@ -1272,7 +1281,10 @@ func (j *jsiiProxy_Release) SetChart(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetCleanupOnFail(val interface{}) {
+func (j *jsiiProxy_Release)SetCleanupOnFail(val interface{}) {
+	if err := j.validateSetCleanupOnFailParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cleanupOnFail",
@@ -1280,7 +1292,10 @@ func (j *jsiiProxy_Release) SetCleanupOnFail(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetConnection(val interface{}) {
+func (j *jsiiProxy_Release)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -1288,7 +1303,7 @@ func (j *jsiiProxy_Release) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetCount(val *float64) {
+func (j *jsiiProxy_Release)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -1296,7 +1311,10 @@ func (j *jsiiProxy_Release) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetCreateNamespace(val interface{}) {
+func (j *jsiiProxy_Release)SetCreateNamespace(val interface{}) {
+	if err := j.validateSetCreateNamespaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"createNamespace",
@@ -1304,7 +1322,10 @@ func (j *jsiiProxy_Release) SetCreateNamespace(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetDependencyUpdate(val interface{}) {
+func (j *jsiiProxy_Release)SetDependencyUpdate(val interface{}) {
+	if err := j.validateSetDependencyUpdateParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"dependencyUpdate",
@@ -1312,7 +1333,7 @@ func (j *jsiiProxy_Release) SetDependencyUpdate(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_Release)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -1320,7 +1341,10 @@ func (j *jsiiProxy_Release) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetDescription(val *string) {
+func (j *jsiiProxy_Release)SetDescription(val *string) {
+	if err := j.validateSetDescriptionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"description",
@@ -1328,7 +1352,10 @@ func (j *jsiiProxy_Release) SetDescription(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetDevel(val interface{}) {
+func (j *jsiiProxy_Release)SetDevel(val interface{}) {
+	if err := j.validateSetDevelParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"devel",
@@ -1336,7 +1363,10 @@ func (j *jsiiProxy_Release) SetDevel(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetDisableCrdHooks(val interface{}) {
+func (j *jsiiProxy_Release)SetDisableCrdHooks(val interface{}) {
+	if err := j.validateSetDisableCrdHooksParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"disableCrdHooks",
@@ -1344,7 +1374,10 @@ func (j *jsiiProxy_Release) SetDisableCrdHooks(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetDisableOpenapiValidation(val interface{}) {
+func (j *jsiiProxy_Release)SetDisableOpenapiValidation(val interface{}) {
+	if err := j.validateSetDisableOpenapiValidationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"disableOpenapiValidation",
@@ -1352,7 +1385,10 @@ func (j *jsiiProxy_Release) SetDisableOpenapiValidation(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetDisableWebhooks(val interface{}) {
+func (j *jsiiProxy_Release)SetDisableWebhooks(val interface{}) {
+	if err := j.validateSetDisableWebhooksParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"disableWebhooks",
@@ -1360,7 +1396,10 @@ func (j *jsiiProxy_Release) SetDisableWebhooks(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetForceUpdate(val interface{}) {
+func (j *jsiiProxy_Release)SetForceUpdate(val interface{}) {
+	if err := j.validateSetForceUpdateParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"forceUpdate",
@@ -1368,7 +1407,7 @@ func (j *jsiiProxy_Release) SetForceUpdate(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_Release)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -1376,7 +1415,10 @@ func (j *jsiiProxy_Release) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetId(val *string) {
+func (j *jsiiProxy_Release)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -1384,7 +1426,10 @@ func (j *jsiiProxy_Release) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetKeyring(val *string) {
+func (j *jsiiProxy_Release)SetKeyring(val *string) {
+	if err := j.validateSetKeyringParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"keyring",
@@ -1392,7 +1437,10 @@ func (j *jsiiProxy_Release) SetKeyring(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_Release)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -1400,7 +1448,10 @@ func (j *jsiiProxy_Release) SetLifecycle(val *cdktf.TerraformResourceLifecycle) 
 	)
 }
 
-func (j *jsiiProxy_Release) SetLint(val interface{}) {
+func (j *jsiiProxy_Release)SetLint(val interface{}) {
+	if err := j.validateSetLintParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lint",
@@ -1408,7 +1459,10 @@ func (j *jsiiProxy_Release) SetLint(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetMaxHistory(val *float64) {
+func (j *jsiiProxy_Release)SetMaxHistory(val *float64) {
+	if err := j.validateSetMaxHistoryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxHistory",
@@ -1416,7 +1470,10 @@ func (j *jsiiProxy_Release) SetMaxHistory(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetName(val *string) {
+func (j *jsiiProxy_Release)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -1424,7 +1481,10 @@ func (j *jsiiProxy_Release) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetNamespace(val *string) {
+func (j *jsiiProxy_Release)SetNamespace(val *string) {
+	if err := j.validateSetNamespaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"namespace",
@@ -1432,7 +1492,10 @@ func (j *jsiiProxy_Release) SetNamespace(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetPassCredentials(val interface{}) {
+func (j *jsiiProxy_Release)SetPassCredentials(val interface{}) {
+	if err := j.validateSetPassCredentialsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"passCredentials",
@@ -1440,7 +1503,7 @@ func (j *jsiiProxy_Release) SetPassCredentials(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_Release)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -1448,7 +1511,10 @@ func (j *jsiiProxy_Release) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_Release)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -1456,7 +1522,10 @@ func (j *jsiiProxy_Release) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetRecreatePods(val interface{}) {
+func (j *jsiiProxy_Release)SetRecreatePods(val interface{}) {
+	if err := j.validateSetRecreatePodsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"recreatePods",
@@ -1464,7 +1533,10 @@ func (j *jsiiProxy_Release) SetRecreatePods(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetRenderSubchartNotes(val interface{}) {
+func (j *jsiiProxy_Release)SetRenderSubchartNotes(val interface{}) {
+	if err := j.validateSetRenderSubchartNotesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"renderSubchartNotes",
@@ -1472,7 +1544,10 @@ func (j *jsiiProxy_Release) SetRenderSubchartNotes(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetReplace(val interface{}) {
+func (j *jsiiProxy_Release)SetReplace(val interface{}) {
+	if err := j.validateSetReplaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"replace",
@@ -1480,7 +1555,10 @@ func (j *jsiiProxy_Release) SetReplace(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetRepository(val *string) {
+func (j *jsiiProxy_Release)SetRepository(val *string) {
+	if err := j.validateSetRepositoryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repository",
@@ -1488,7 +1566,10 @@ func (j *jsiiProxy_Release) SetRepository(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetRepositoryCaFile(val *string) {
+func (j *jsiiProxy_Release)SetRepositoryCaFile(val *string) {
+	if err := j.validateSetRepositoryCaFileParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryCaFile",
@@ -1496,7 +1577,10 @@ func (j *jsiiProxy_Release) SetRepositoryCaFile(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetRepositoryCertFile(val *string) {
+func (j *jsiiProxy_Release)SetRepositoryCertFile(val *string) {
+	if err := j.validateSetRepositoryCertFileParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryCertFile",
@@ -1504,7 +1588,10 @@ func (j *jsiiProxy_Release) SetRepositoryCertFile(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetRepositoryKeyFile(val *string) {
+func (j *jsiiProxy_Release)SetRepositoryKeyFile(val *string) {
+	if err := j.validateSetRepositoryKeyFileParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryKeyFile",
@@ -1512,7 +1599,10 @@ func (j *jsiiProxy_Release) SetRepositoryKeyFile(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetRepositoryPassword(val *string) {
+func (j *jsiiProxy_Release)SetRepositoryPassword(val *string) {
+	if err := j.validateSetRepositoryPasswordParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryPassword",
@@ -1520,7 +1610,10 @@ func (j *jsiiProxy_Release) SetRepositoryPassword(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetRepositoryUsername(val *string) {
+func (j *jsiiProxy_Release)SetRepositoryUsername(val *string) {
+	if err := j.validateSetRepositoryUsernameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryUsername",
@@ -1528,7 +1621,10 @@ func (j *jsiiProxy_Release) SetRepositoryUsername(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetResetValues(val interface{}) {
+func (j *jsiiProxy_Release)SetResetValues(val interface{}) {
+	if err := j.validateSetResetValuesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"resetValues",
@@ -1536,7 +1632,10 @@ func (j *jsiiProxy_Release) SetResetValues(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetReuseValues(val interface{}) {
+func (j *jsiiProxy_Release)SetReuseValues(val interface{}) {
+	if err := j.validateSetReuseValuesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"reuseValues",
@@ -1544,7 +1643,10 @@ func (j *jsiiProxy_Release) SetReuseValues(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetSkipCrds(val interface{}) {
+func (j *jsiiProxy_Release)SetSkipCrds(val interface{}) {
+	if err := j.validateSetSkipCrdsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"skipCrds",
@@ -1552,7 +1654,10 @@ func (j *jsiiProxy_Release) SetSkipCrds(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetTimeout(val *float64) {
+func (j *jsiiProxy_Release)SetTimeout(val *float64) {
+	if err := j.validateSetTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"timeout",
@@ -1560,7 +1665,10 @@ func (j *jsiiProxy_Release) SetTimeout(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetValues(val *[]*string) {
+func (j *jsiiProxy_Release)SetValues(val *[]*string) {
+	if err := j.validateSetValuesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"values",
@@ -1568,7 +1676,10 @@ func (j *jsiiProxy_Release) SetValues(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetVerify(val interface{}) {
+func (j *jsiiProxy_Release)SetVerify(val interface{}) {
+	if err := j.validateSetVerifyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"verify",
@@ -1576,7 +1687,10 @@ func (j *jsiiProxy_Release) SetVerify(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetVersion(val *string) {
+func (j *jsiiProxy_Release)SetVersion(val *string) {
+	if err := j.validateSetVersionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"version",
@@ -1584,7 +1698,10 @@ func (j *jsiiProxy_Release) SetVersion(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetWait(val interface{}) {
+func (j *jsiiProxy_Release)SetWait(val interface{}) {
+	if err := j.validateSetWaitParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wait",
@@ -1592,7 +1709,10 @@ func (j *jsiiProxy_Release) SetWait(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release) SetWaitForJobs(val interface{}) {
+func (j *jsiiProxy_Release)SetWaitForJobs(val interface{}) {
+	if err := j.validateSetWaitForJobsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"waitForJobs",
@@ -1620,6 +1740,9 @@ func (j *jsiiProxy_Release) SetWaitForJobs(val interface{}) {
 func Release_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateRelease_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -1644,6 +1767,9 @@ func Release_TfResourceType() *string {
 }
 
 func (r *jsiiProxy_Release) AddOverride(path *string, value interface{}) {
+	if err := r.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"addOverride",
@@ -1652,6 +1778,9 @@ func (r *jsiiProxy_Release) AddOverride(path *string, value interface{}) {
 }
 
 func (r *jsiiProxy_Release) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := r.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -1665,6 +1794,9 @@ func (r *jsiiProxy_Release) GetAnyMapAttribute(terraformAttribute *string) *map[
 }
 
 func (r *jsiiProxy_Release) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1678,6 +1810,9 @@ func (r *jsiiProxy_Release) GetBooleanAttribute(terraformAttribute *string) cdkt
 }
 
 func (r *jsiiProxy_Release) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := r.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -1691,6 +1826,9 @@ func (r *jsiiProxy_Release) GetBooleanMapAttribute(terraformAttribute *string) *
 }
 
 func (r *jsiiProxy_Release) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := r.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -1704,6 +1842,9 @@ func (r *jsiiProxy_Release) GetListAttribute(terraformAttribute *string) *[]*str
 }
 
 func (r *jsiiProxy_Release) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := r.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -1717,6 +1858,9 @@ func (r *jsiiProxy_Release) GetNumberAttribute(terraformAttribute *string) *floa
 }
 
 func (r *jsiiProxy_Release) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := r.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -1730,6 +1874,9 @@ func (r *jsiiProxy_Release) GetNumberListAttribute(terraformAttribute *string) *
 }
 
 func (r *jsiiProxy_Release) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := r.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -1743,6 +1890,9 @@ func (r *jsiiProxy_Release) GetNumberMapAttribute(terraformAttribute *string) *m
 }
 
 func (r *jsiiProxy_Release) GetStringAttribute(terraformAttribute *string) *string {
+	if err := r.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1756,6 +1906,9 @@ func (r *jsiiProxy_Release) GetStringAttribute(terraformAttribute *string) *stri
 }
 
 func (r *jsiiProxy_Release) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := r.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1769,6 +1922,9 @@ func (r *jsiiProxy_Release) GetStringMapAttribute(terraformAttribute *string) *m
 }
 
 func (r *jsiiProxy_Release) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1782,6 +1938,9 @@ func (r *jsiiProxy_Release) InterpolationForAttribute(terraformAttribute *string
 }
 
 func (r *jsiiProxy_Release) OverrideLogicalId(newLogicalId *string) {
+	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"overrideLogicalId",
@@ -1790,6 +1949,9 @@ func (r *jsiiProxy_Release) OverrideLogicalId(newLogicalId *string) {
 }
 
 func (r *jsiiProxy_Release) PutPostrender(value *ReleasePostrender) {
+	if err := r.validatePutPostrenderParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"putPostrender",
@@ -1798,6 +1960,9 @@ func (r *jsiiProxy_Release) PutPostrender(value *ReleasePostrender) {
 }
 
 func (r *jsiiProxy_Release) PutSet(value interface{}) {
+	if err := r.validatePutSetParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"putSet",
@@ -1806,6 +1971,9 @@ func (r *jsiiProxy_Release) PutSet(value interface{}) {
 }
 
 func (r *jsiiProxy_Release) PutSetSensitive(value interface{}) {
+	if err := r.validatePutSetSensitiveParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"putSetSensitive",

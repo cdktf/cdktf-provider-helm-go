@@ -1245,6 +1245,9 @@ func (j *jsiiProxy_DataHelmTemplate) WaitInput() interface{} {
 func NewDataHelmTemplate(scope constructs.Construct, id *string, config *DataHelmTemplateConfig) DataHelmTemplate {
 	_init_.Initialize()
 
+	if err := validateNewDataHelmTemplateParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataHelmTemplate{}
 
 	_jsii_.Create(
@@ -1267,7 +1270,10 @@ func NewDataHelmTemplate_Override(d DataHelmTemplate, scope constructs.Construct
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetApiVersions(val *[]*string) {
+func (j *jsiiProxy_DataHelmTemplate)SetApiVersions(val *[]*string) {
+	if err := j.validateSetApiVersionsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"apiVersions",
@@ -1275,7 +1281,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetApiVersions(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetAtomic(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetAtomic(val interface{}) {
+	if err := j.validateSetAtomicParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"atomic",
@@ -1283,7 +1292,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetAtomic(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetChart(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetChart(val *string) {
+	if err := j.validateSetChartParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"chart",
@@ -1291,7 +1303,7 @@ func (j *jsiiProxy_DataHelmTemplate) SetChart(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetCount(val *float64) {
+func (j *jsiiProxy_DataHelmTemplate)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -1299,7 +1311,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetCreateNamespace(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetCreateNamespace(val interface{}) {
+	if err := j.validateSetCreateNamespaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"createNamespace",
@@ -1307,7 +1322,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetCreateNamespace(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetDependencyUpdate(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetDependencyUpdate(val interface{}) {
+	if err := j.validateSetDependencyUpdateParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"dependencyUpdate",
@@ -1315,7 +1333,7 @@ func (j *jsiiProxy_DataHelmTemplate) SetDependencyUpdate(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_DataHelmTemplate)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -1323,7 +1341,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetDescription(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetDescription(val *string) {
+	if err := j.validateSetDescriptionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"description",
@@ -1331,7 +1352,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetDescription(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetDevel(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetDevel(val interface{}) {
+	if err := j.validateSetDevelParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"devel",
@@ -1339,7 +1363,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetDevel(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetDisableOpenapiValidation(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetDisableOpenapiValidation(val interface{}) {
+	if err := j.validateSetDisableOpenapiValidationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"disableOpenapiValidation",
@@ -1347,7 +1374,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetDisableOpenapiValidation(val interface{}
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetDisableWebhooks(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetDisableWebhooks(val interface{}) {
+	if err := j.validateSetDisableWebhooksParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"disableWebhooks",
@@ -1355,7 +1385,7 @@ func (j *jsiiProxy_DataHelmTemplate) SetDisableWebhooks(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_DataHelmTemplate)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -1363,7 +1393,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetId(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -1371,7 +1404,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetIncludeCrds(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetIncludeCrds(val interface{}) {
+	if err := j.validateSetIncludeCrdsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"includeCrds",
@@ -1379,7 +1415,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetIncludeCrds(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetIsUpgrade(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetIsUpgrade(val interface{}) {
+	if err := j.validateSetIsUpgradeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"isUpgrade",
@@ -1387,7 +1426,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetIsUpgrade(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetKeyring(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetKeyring(val *string) {
+	if err := j.validateSetKeyringParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"keyring",
@@ -1395,7 +1437,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetKeyring(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_DataHelmTemplate)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -1403,7 +1448,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetLifecycle(val *cdktf.TerraformResourceLi
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetManifest(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetManifest(val *string) {
+	if err := j.validateSetManifestParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"manifest",
@@ -1411,7 +1459,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetManifest(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetManifests(val *map[string]*string) {
+func (j *jsiiProxy_DataHelmTemplate)SetManifests(val *map[string]*string) {
+	if err := j.validateSetManifestsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"manifests",
@@ -1419,7 +1470,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetManifests(val *map[string]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetName(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -1427,7 +1481,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetNamespace(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetNamespace(val *string) {
+	if err := j.validateSetNamespaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"namespace",
@@ -1435,7 +1492,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetNamespace(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetNotes(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetNotes(val *string) {
+	if err := j.validateSetNotesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"notes",
@@ -1443,7 +1503,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetNotes(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetPassCredentials(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetPassCredentials(val interface{}) {
+	if err := j.validateSetPassCredentialsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"passCredentials",
@@ -1451,7 +1514,7 @@ func (j *jsiiProxy_DataHelmTemplate) SetPassCredentials(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_DataHelmTemplate)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -1459,7 +1522,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetRenderSubchartNotes(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetRenderSubchartNotes(val interface{}) {
+	if err := j.validateSetRenderSubchartNotesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"renderSubchartNotes",
@@ -1467,7 +1533,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetRenderSubchartNotes(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetReplace(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetReplace(val interface{}) {
+	if err := j.validateSetReplaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"replace",
@@ -1475,7 +1544,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetReplace(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetRepository(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetRepository(val *string) {
+	if err := j.validateSetRepositoryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repository",
@@ -1483,7 +1555,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetRepository(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetRepositoryCaFile(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetRepositoryCaFile(val *string) {
+	if err := j.validateSetRepositoryCaFileParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryCaFile",
@@ -1491,7 +1566,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetRepositoryCaFile(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetRepositoryCertFile(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetRepositoryCertFile(val *string) {
+	if err := j.validateSetRepositoryCertFileParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryCertFile",
@@ -1499,7 +1577,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetRepositoryCertFile(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetRepositoryKeyFile(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetRepositoryKeyFile(val *string) {
+	if err := j.validateSetRepositoryKeyFileParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryKeyFile",
@@ -1507,7 +1588,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetRepositoryKeyFile(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetRepositoryPassword(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetRepositoryPassword(val *string) {
+	if err := j.validateSetRepositoryPasswordParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryPassword",
@@ -1515,7 +1599,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetRepositoryPassword(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetRepositoryUsername(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetRepositoryUsername(val *string) {
+	if err := j.validateSetRepositoryUsernameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"repositoryUsername",
@@ -1523,7 +1610,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetRepositoryUsername(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetResetValues(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetResetValues(val interface{}) {
+	if err := j.validateSetResetValuesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"resetValues",
@@ -1531,7 +1621,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetResetValues(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetReuseValues(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetReuseValues(val interface{}) {
+	if err := j.validateSetReuseValuesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"reuseValues",
@@ -1539,7 +1632,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetReuseValues(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetShowOnly(val *[]*string) {
+func (j *jsiiProxy_DataHelmTemplate)SetShowOnly(val *[]*string) {
+	if err := j.validateSetShowOnlyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"showOnly",
@@ -1547,7 +1643,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetShowOnly(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetSkipCrds(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetSkipCrds(val interface{}) {
+	if err := j.validateSetSkipCrdsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"skipCrds",
@@ -1555,7 +1654,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetSkipCrds(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetSkipTests(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetSkipTests(val interface{}) {
+	if err := j.validateSetSkipTestsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"skipTests",
@@ -1563,7 +1665,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetSkipTests(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetTimeout(val *float64) {
+func (j *jsiiProxy_DataHelmTemplate)SetTimeout(val *float64) {
+	if err := j.validateSetTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"timeout",
@@ -1571,7 +1676,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetTimeout(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetValidate(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetValidate(val interface{}) {
+	if err := j.validateSetValidateParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"validate",
@@ -1579,7 +1687,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetValidate(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetValues(val *[]*string) {
+func (j *jsiiProxy_DataHelmTemplate)SetValues(val *[]*string) {
+	if err := j.validateSetValuesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"values",
@@ -1587,7 +1698,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetValues(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetVerify(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetVerify(val interface{}) {
+	if err := j.validateSetVerifyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"verify",
@@ -1595,7 +1709,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetVerify(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetVersion(val *string) {
+func (j *jsiiProxy_DataHelmTemplate)SetVersion(val *string) {
+	if err := j.validateSetVersionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"version",
@@ -1603,7 +1720,10 @@ func (j *jsiiProxy_DataHelmTemplate) SetVersion(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetWait(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplate)SetWait(val interface{}) {
+	if err := j.validateSetWaitParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wait",
@@ -1631,6 +1751,9 @@ func (j *jsiiProxy_DataHelmTemplate) SetWait(val interface{}) {
 func DataHelmTemplate_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateDataHelmTemplate_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -1655,6 +1778,9 @@ func DataHelmTemplate_TfResourceType() *string {
 }
 
 func (d *jsiiProxy_DataHelmTemplate) AddOverride(path *string, value interface{}) {
+	if err := d.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"addOverride",
@@ -1663,6 +1789,9 @@ func (d *jsiiProxy_DataHelmTemplate) AddOverride(path *string, value interface{}
 }
 
 func (d *jsiiProxy_DataHelmTemplate) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -1676,6 +1805,9 @@ func (d *jsiiProxy_DataHelmTemplate) GetAnyMapAttribute(terraformAttribute *stri
 }
 
 func (d *jsiiProxy_DataHelmTemplate) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1689,6 +1821,9 @@ func (d *jsiiProxy_DataHelmTemplate) GetBooleanAttribute(terraformAttribute *str
 }
 
 func (d *jsiiProxy_DataHelmTemplate) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -1702,6 +1837,9 @@ func (d *jsiiProxy_DataHelmTemplate) GetBooleanMapAttribute(terraformAttribute *
 }
 
 func (d *jsiiProxy_DataHelmTemplate) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -1715,6 +1853,9 @@ func (d *jsiiProxy_DataHelmTemplate) GetListAttribute(terraformAttribute *string
 }
 
 func (d *jsiiProxy_DataHelmTemplate) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -1728,6 +1869,9 @@ func (d *jsiiProxy_DataHelmTemplate) GetNumberAttribute(terraformAttribute *stri
 }
 
 func (d *jsiiProxy_DataHelmTemplate) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -1741,6 +1885,9 @@ func (d *jsiiProxy_DataHelmTemplate) GetNumberListAttribute(terraformAttribute *
 }
 
 func (d *jsiiProxy_DataHelmTemplate) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -1754,6 +1901,9 @@ func (d *jsiiProxy_DataHelmTemplate) GetNumberMapAttribute(terraformAttribute *s
 }
 
 func (d *jsiiProxy_DataHelmTemplate) GetStringAttribute(terraformAttribute *string) *string {
+	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1767,6 +1917,9 @@ func (d *jsiiProxy_DataHelmTemplate) GetStringAttribute(terraformAttribute *stri
 }
 
 func (d *jsiiProxy_DataHelmTemplate) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1780,6 +1933,9 @@ func (d *jsiiProxy_DataHelmTemplate) GetStringMapAttribute(terraformAttribute *s
 }
 
 func (d *jsiiProxy_DataHelmTemplate) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1793,6 +1949,9 @@ func (d *jsiiProxy_DataHelmTemplate) InterpolationForAttribute(terraformAttribut
 }
 
 func (d *jsiiProxy_DataHelmTemplate) OverrideLogicalId(newLogicalId *string) {
+	if err := d.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"overrideLogicalId",
@@ -1801,6 +1960,9 @@ func (d *jsiiProxy_DataHelmTemplate) OverrideLogicalId(newLogicalId *string) {
 }
 
 func (d *jsiiProxy_DataHelmTemplate) PutPostrender(value *DataHelmTemplatePostrender) {
+	if err := d.validatePutPostrenderParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"putPostrender",
@@ -1809,6 +1971,9 @@ func (d *jsiiProxy_DataHelmTemplate) PutPostrender(value *DataHelmTemplatePostre
 }
 
 func (d *jsiiProxy_DataHelmTemplate) PutSet(value interface{}) {
+	if err := d.validatePutSetParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"putSet",
@@ -1817,6 +1982,9 @@ func (d *jsiiProxy_DataHelmTemplate) PutSet(value interface{}) {
 }
 
 func (d *jsiiProxy_DataHelmTemplate) PutSetSensitive(value interface{}) {
+	if err := d.validatePutSetSensitiveParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"putSetSensitive",
@@ -1825,6 +1993,9 @@ func (d *jsiiProxy_DataHelmTemplate) PutSetSensitive(value interface{}) {
 }
 
 func (d *jsiiProxy_DataHelmTemplate) PutSetString(value interface{}) {
+	if err := d.validatePutSetStringParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"putSetString",

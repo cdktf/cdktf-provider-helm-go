@@ -111,6 +111,9 @@ func (j *jsiiProxy_ReleaseSetList) WrapsSet() *bool {
 func NewReleaseSetList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ReleaseSetList {
 	_init_.Initialize()
 
+	if err := validateNewReleaseSetListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ReleaseSetList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewReleaseSetList_Override(r ReleaseSetList, terraformResource cdktf.IInter
 	)
 }
 
-func (j *jsiiProxy_ReleaseSetList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ReleaseSetList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ReleaseSetList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ReleaseSetList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ReleaseSetList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ReleaseSetList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ReleaseSetList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ReleaseSetList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ReleaseSetList) SetTerraformResource(val cdktf.IInterpolating
 	)
 }
 
-func (j *jsiiProxy_ReleaseSetList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ReleaseSetList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (r *jsiiProxy_ReleaseSetList) ComputeFqn() *string {
 }
 
 func (r *jsiiProxy_ReleaseSetList) Get(index *float64) ReleaseSetOutputReference {
+	if err := r.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ReleaseSetOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (r *jsiiProxy_ReleaseSetList) Get(index *float64) ReleaseSetOutputReference
 }
 
 func (r *jsiiProxy_ReleaseSetList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

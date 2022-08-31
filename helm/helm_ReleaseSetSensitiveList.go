@@ -111,6 +111,9 @@ func (j *jsiiProxy_ReleaseSetSensitiveList) WrapsSet() *bool {
 func NewReleaseSetSensitiveList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ReleaseSetSensitiveList {
 	_init_.Initialize()
 
+	if err := validateNewReleaseSetSensitiveListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ReleaseSetSensitiveList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewReleaseSetSensitiveList_Override(r ReleaseSetSensitiveList, terraformRes
 	)
 }
 
-func (j *jsiiProxy_ReleaseSetSensitiveList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ReleaseSetSensitiveList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ReleaseSetSensitiveList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ReleaseSetSensitiveList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ReleaseSetSensitiveList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ReleaseSetSensitiveList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ReleaseSetSensitiveList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ReleaseSetSensitiveList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ReleaseSetSensitiveList) SetTerraformResource(val cdktf.IInte
 	)
 }
 
-func (j *jsiiProxy_ReleaseSetSensitiveList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ReleaseSetSensitiveList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (r *jsiiProxy_ReleaseSetSensitiveList) ComputeFqn() *string {
 }
 
 func (r *jsiiProxy_ReleaseSetSensitiveList) Get(index *float64) ReleaseSetSensitiveOutputReference {
+	if err := r.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ReleaseSetSensitiveOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (r *jsiiProxy_ReleaseSetSensitiveList) Get(index *float64) ReleaseSetSensit
 }
 
 func (r *jsiiProxy_ReleaseSetSensitiveList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

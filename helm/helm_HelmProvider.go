@@ -377,6 +377,9 @@ func (j *jsiiProxy_HelmProvider) TerraformResourceType() *string {
 func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProviderConfig) HelmProvider {
 	_init_.Initialize()
 
+	if err := validateNewHelmProviderParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_HelmProvider{}
 
 	_jsii_.Create(
@@ -399,7 +402,7 @@ func NewHelmProvider_Override(h HelmProvider, scope constructs.Construct, id *st
 	)
 }
 
-func (j *jsiiProxy_HelmProvider) SetAlias(val *string) {
+func (j *jsiiProxy_HelmProvider)SetAlias(val *string) {
 	_jsii_.Set(
 		j,
 		"alias",
@@ -407,7 +410,10 @@ func (j *jsiiProxy_HelmProvider) SetAlias(val *string) {
 	)
 }
 
-func (j *jsiiProxy_HelmProvider) SetDebug(val interface{}) {
+func (j *jsiiProxy_HelmProvider)SetDebug(val interface{}) {
+	if err := j.validateSetDebugParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"debug",
@@ -415,7 +421,10 @@ func (j *jsiiProxy_HelmProvider) SetDebug(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_HelmProvider) SetExperiments(val *HelmProviderExperiments) {
+func (j *jsiiProxy_HelmProvider)SetExperiments(val *HelmProviderExperiments) {
+	if err := j.validateSetExperimentsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"experiments",
@@ -423,7 +432,7 @@ func (j *jsiiProxy_HelmProvider) SetExperiments(val *HelmProviderExperiments) {
 	)
 }
 
-func (j *jsiiProxy_HelmProvider) SetHelmDriver(val *string) {
+func (j *jsiiProxy_HelmProvider)SetHelmDriver(val *string) {
 	_jsii_.Set(
 		j,
 		"helmDriver",
@@ -431,7 +440,10 @@ func (j *jsiiProxy_HelmProvider) SetHelmDriver(val *string) {
 	)
 }
 
-func (j *jsiiProxy_HelmProvider) SetKubernetes(val *HelmProviderKubernetes) {
+func (j *jsiiProxy_HelmProvider)SetKubernetes(val *HelmProviderKubernetes) {
+	if err := j.validateSetKubernetesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"kubernetes",
@@ -439,7 +451,7 @@ func (j *jsiiProxy_HelmProvider) SetKubernetes(val *HelmProviderKubernetes) {
 	)
 }
 
-func (j *jsiiProxy_HelmProvider) SetPluginsPath(val *string) {
+func (j *jsiiProxy_HelmProvider)SetPluginsPath(val *string) {
 	_jsii_.Set(
 		j,
 		"pluginsPath",
@@ -447,7 +459,7 @@ func (j *jsiiProxy_HelmProvider) SetPluginsPath(val *string) {
 	)
 }
 
-func (j *jsiiProxy_HelmProvider) SetRegistryConfigPath(val *string) {
+func (j *jsiiProxy_HelmProvider)SetRegistryConfigPath(val *string) {
 	_jsii_.Set(
 		j,
 		"registryConfigPath",
@@ -455,7 +467,7 @@ func (j *jsiiProxy_HelmProvider) SetRegistryConfigPath(val *string) {
 	)
 }
 
-func (j *jsiiProxy_HelmProvider) SetRepositoryCache(val *string) {
+func (j *jsiiProxy_HelmProvider)SetRepositoryCache(val *string) {
 	_jsii_.Set(
 		j,
 		"repositoryCache",
@@ -463,7 +475,7 @@ func (j *jsiiProxy_HelmProvider) SetRepositoryCache(val *string) {
 	)
 }
 
-func (j *jsiiProxy_HelmProvider) SetRepositoryConfigPath(val *string) {
+func (j *jsiiProxy_HelmProvider)SetRepositoryConfigPath(val *string) {
 	_jsii_.Set(
 		j,
 		"repositoryConfigPath",
@@ -491,6 +503,9 @@ func (j *jsiiProxy_HelmProvider) SetRepositoryConfigPath(val *string) {
 func HelmProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateHelmProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -515,6 +530,9 @@ func HelmProvider_TfResourceType() *string {
 }
 
 func (h *jsiiProxy_HelmProvider) AddOverride(path *string, value interface{}) {
+	if err := h.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		h,
 		"addOverride",
@@ -523,6 +541,9 @@ func (h *jsiiProxy_HelmProvider) AddOverride(path *string, value interface{}) {
 }
 
 func (h *jsiiProxy_HelmProvider) OverrideLogicalId(newLogicalId *string) {
+	if err := h.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		h,
 		"overrideLogicalId",

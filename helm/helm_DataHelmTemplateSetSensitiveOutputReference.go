@@ -221,6 +221,9 @@ func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) ValueInput() *st
 func NewDataHelmTemplateSetSensitiveOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) DataHelmTemplateSetSensitiveOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewDataHelmTemplateSetSensitiveOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataHelmTemplateSetSensitiveOutputReference{}
 
 	_jsii_.Create(
@@ -242,7 +245,10 @@ func NewDataHelmTemplateSetSensitiveOutputReference_Override(d DataHelmTemplateS
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -250,7 +256,10 @@ func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetComplexObject
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -258,7 +267,10 @@ func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetComplexObject
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -266,7 +278,10 @@ func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetInternalValue
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetName(val *string) {
+func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -274,7 +289,10 @@ func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetName(val *str
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -282,7 +300,10 @@ func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetTerraformAttr
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -290,7 +311,10 @@ func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetTerraformReso
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetType(val *string) {
+func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference)SetType(val *string) {
+	if err := j.validateSetTypeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"type",
@@ -298,7 +322,10 @@ func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetType(val *str
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) SetValue(val *string) {
+func (j *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference)SetValue(val *string) {
+	if err := j.validateSetValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"value",
@@ -320,6 +347,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) ComputeFqn() *st
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -333,6 +363,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetAnyMapAttribu
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -346,6 +379,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetBooleanAttrib
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -359,6 +395,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetBooleanMapAtt
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -372,6 +411,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetListAttribute
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -385,6 +427,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetNumberAttribu
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -398,6 +443,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetNumberListAtt
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -411,6 +459,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetNumberMapAttr
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -424,6 +475,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetStringAttribu
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -450,6 +504,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) InterpolationAsL
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := d.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -471,6 +528,9 @@ func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) ResetType() {
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetSensitiveOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

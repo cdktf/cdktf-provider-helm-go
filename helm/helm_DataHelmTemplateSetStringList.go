@@ -111,6 +111,9 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) WrapsSet() *bool {
 func NewDataHelmTemplateSetStringList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataHelmTemplateSetStringList {
 	_init_.Initialize()
 
+	if err := validateNewDataHelmTemplateSetStringListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataHelmTemplateSetStringList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewDataHelmTemplateSetStringList_Override(d DataHelmTemplateSetStringList, 
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_DataHelmTemplateSetStringList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) SetInternalValue(val interface
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataHelmTemplateSetStringList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) SetTerraformAttribute(val *str
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataHelmTemplateSetStringList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) SetTerraformResource(val cdktf
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataHelmTemplateSetStringList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (d *jsiiProxy_DataHelmTemplateSetStringList) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetStringList) Get(index *float64) DataHelmTemplateSetStringOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataHelmTemplateSetStringOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (d *jsiiProxy_DataHelmTemplateSetStringList) Get(index *float64) DataHelmTe
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetStringList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(
