@@ -16,6 +16,14 @@ func validateHelmProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateHelmProvider_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateHelmProvider_IsTerraformProviderParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_HelmProvider) validateSetDebugParameters(val interface{}) error {
 	return nil
 }

@@ -72,6 +72,14 @@ func validateDataHelmTemplate_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataHelmTemplate_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataHelmTemplate_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataHelmTemplate) validateSetApiVersionsParameters(val *[]*string) error {
 	return nil
 }

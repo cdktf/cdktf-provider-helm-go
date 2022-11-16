@@ -68,6 +68,14 @@ func validateRelease_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateRelease_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateRelease_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Release) validateSetAtomicParameters(val interface{}) error {
 	return nil
 }
