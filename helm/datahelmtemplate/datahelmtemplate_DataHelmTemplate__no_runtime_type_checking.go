@@ -132,6 +132,10 @@ func (j *jsiiProxy_DataHelmTemplate) validateSetKeyringParameters(val *string) e
 	return nil
 }
 
+func (j *jsiiProxy_DataHelmTemplate) validateSetKubeVersionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataHelmTemplate) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

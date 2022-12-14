@@ -71,6 +71,9 @@ type DataHelmTemplate interface {
 	Keyring() *string
 	SetKeyring(val *string)
 	KeyringInput() *string
+	KubeVersion() *string
+	SetKubeVersion(val *string)
+	KubeVersionInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -213,6 +216,7 @@ type DataHelmTemplate interface {
 	ResetIncludeCrds()
 	ResetIsUpgrade()
 	ResetKeyring()
+	ResetKubeVersion()
 	ResetManifest()
 	ResetManifests()
 	ResetNamespace()
@@ -584,6 +588,26 @@ func (j *jsiiProxy_DataHelmTemplate) KeyringInput() *string {
 	_jsii_.Get(
 		j,
 		"keyringInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHelmTemplate) KubeVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kubeVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHelmTemplate) KubeVersionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kubeVersionInput",
 		&returns,
 	)
 	return returns
@@ -1436,6 +1460,17 @@ func (j *jsiiProxy_DataHelmTemplate)SetKeyring(val *string) {
 	)
 }
 
+func (j *jsiiProxy_DataHelmTemplate)SetKubeVersion(val *string) {
+	if err := j.validateSetKubeVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kubeVersion",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataHelmTemplate)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
@@ -2132,6 +2167,14 @@ func (d *jsiiProxy_DataHelmTemplate) ResetKeyring() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetKeyring",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataHelmTemplate) ResetKubeVersion() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKubeVersion",
 		nil, // no parameters
 	)
 }

@@ -88,6 +88,34 @@ func (j *jsiiProxy_HelmProvider) validateSetKubernetesParameters(val *HelmProvid
 	return nil
 }
 
+func (j *jsiiProxy_HelmProvider) validateSetRegistryParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*HelmProviderRegistry:
+		val := val.(*[]*HelmProviderRegistry)
+		for idx_97dfc6, v := range *val {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
+				return err
+			}
+		}
+	case []*HelmProviderRegistry:
+		val_ := val.([]*HelmProviderRegistry)
+		val := &val_
+		for idx_97dfc6, v := range *val {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*HelmProviderRegistry; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
 func validateNewHelmProviderParameters(scope constructs.Construct, id *string, config *HelmProviderConfig) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")

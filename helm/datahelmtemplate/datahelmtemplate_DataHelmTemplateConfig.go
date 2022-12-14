@@ -76,6 +76,10 @@ type DataHelmTemplateConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#keyring DataHelmTemplate#keyring}
 	Keyring *string `field:"optional" json:"keyring" yaml:"keyring"`
+	// Kubernetes version used for Capabilities.KubeVersion.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#kube_version DataHelmTemplate#kube_version}
+	KubeVersion *string `field:"optional" json:"kubeVersion" yaml:"kubeVersion"`
 	// Concatenated rendered chart templates. This corresponds to the output of the `helm template` command.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#manifest DataHelmTemplate#manifest}

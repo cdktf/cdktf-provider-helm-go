@@ -44,9 +44,12 @@ type HelmProvider interface {
 	PluginsPathInput() *string
 	// Experimental.
 	RawOverrides() interface{}
+	Registry() interface{}
+	SetRegistry(val interface{})
 	RegistryConfigPath() *string
 	SetRegistryConfigPath(val *string)
 	RegistryConfigPathInput() *string
+	RegistryInput() interface{}
 	RepositoryCache() *string
 	SetRepositoryCache(val *string)
 	RepositoryCacheInput() *string
@@ -73,6 +76,7 @@ type HelmProvider interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPluginsPath()
+	ResetRegistry()
 	ResetRegistryConfigPath()
 	ResetRepositoryCache()
 	ResetRepositoryConfigPath()
@@ -281,6 +285,16 @@ func (j *jsiiProxy_HelmProvider) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_HelmProvider) Registry() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"registry",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_HelmProvider) RegistryConfigPath() *string {
 	var returns *string
 	_jsii_.Get(
@@ -296,6 +310,16 @@ func (j *jsiiProxy_HelmProvider) RegistryConfigPathInput() *string {
 	_jsii_.Get(
 		j,
 		"registryConfigPathInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_HelmProvider) RegistryInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"registryInput",
 		&returns,
 	)
 	return returns
@@ -454,6 +478,17 @@ func (j *jsiiProxy_HelmProvider)SetPluginsPath(val *string) {
 	_jsii_.Set(
 		j,
 		"pluginsPath",
+		val,
+	)
+}
+
+func (j *jsiiProxy_HelmProvider)SetRegistry(val interface{}) {
+	if err := j.validateSetRegistryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"registry",
 		val,
 	)
 }
@@ -640,6 +675,14 @@ func (h *jsiiProxy_HelmProvider) ResetPluginsPath() {
 	_jsii_.InvokeVoid(
 		h,
 		"resetPluginsPath",
+		nil, // no parameters
+	)
+}
+
+func (h *jsiiProxy_HelmProvider) ResetRegistry() {
+	_jsii_.InvokeVoid(
+		h,
+		"resetRegistry",
 		nil, // no parameters
 	)
 }

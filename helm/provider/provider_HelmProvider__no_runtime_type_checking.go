@@ -36,6 +36,10 @@ func (j *jsiiProxy_HelmProvider) validateSetKubernetesParameters(val *HelmProvid
 	return nil
 }
 
+func (j *jsiiProxy_HelmProvider) validateSetRegistryParameters(val interface{}) error {
+	return nil
+}
+
 func validateNewHelmProviderParameters(scope constructs.Construct, id *string, config *HelmProviderConfig) error {
 	return nil
 }

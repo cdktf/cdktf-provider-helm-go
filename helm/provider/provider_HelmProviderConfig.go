@@ -26,6 +26,10 @@ type HelmProviderConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#plugins_path HelmProvider#plugins_path}
 	PluginsPath *string `field:"optional" json:"pluginsPath" yaml:"pluginsPath"`
+	// registry block.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#registry HelmProvider#registry}
+	Registry interface{} `field:"optional" json:"registry" yaml:"registry"`
 	// The path to the registry config file.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#registry_config_path HelmProvider#registry_config_path}
