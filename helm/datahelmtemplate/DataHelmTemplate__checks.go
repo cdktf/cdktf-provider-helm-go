@@ -275,6 +275,14 @@ func (j *jsiiProxy_DataHelmTemplate) validateSetChartParameters(val *string) err
 	return nil
 }
 
+func (j *jsiiProxy_DataHelmTemplate) validateSetCrdsParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DataHelmTemplate) validateSetCreateNamespaceParameters(val interface{}) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

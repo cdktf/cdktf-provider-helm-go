@@ -35,6 +35,10 @@ type DataHelmTemplateConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#atomic DataHelmTemplate#atomic}
 	Atomic interface{} `field:"optional" json:"atomic" yaml:"atomic"`
+	// List of rendered CRDs from the chart.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#crds DataHelmTemplate#crds}
+	Crds *[]*string `field:"optional" json:"crds" yaml:"crds"`
 	// Create the namespace if it does not exist.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#create_namespace DataHelmTemplate#create_namespace}

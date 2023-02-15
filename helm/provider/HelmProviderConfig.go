@@ -6,6 +6,10 @@ type HelmProviderConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#alias HelmProvider#alias}
 	Alias *string `field:"optional" json:"alias" yaml:"alias"`
+	// Helm burst limit. Increase this if you have a cluster with many CRDs.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#burst_limit HelmProvider#burst_limit}
+	BurstLimit *float64 `field:"optional" json:"burstLimit" yaml:"burstLimit"`
 	// Debug indicates whether or not Helm is running in Debug mode.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#debug HelmProvider#debug}

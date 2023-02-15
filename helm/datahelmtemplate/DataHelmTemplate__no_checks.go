@@ -92,6 +92,10 @@ func (j *jsiiProxy_DataHelmTemplate) validateSetChartParameters(val *string) err
 	return nil
 }
 
+func (j *jsiiProxy_DataHelmTemplate) validateSetCrdsParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataHelmTemplate) validateSetCreateNamespaceParameters(val interface{}) error {
 	return nil
 }

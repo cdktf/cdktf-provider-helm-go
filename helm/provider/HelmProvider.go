@@ -15,6 +15,9 @@ type HelmProvider interface {
 	Alias() *string
 	SetAlias(val *string)
 	AliasInput() *string
+	BurstLimit() *float64
+	SetBurstLimit(val *float64)
+	BurstLimitInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -68,6 +71,7 @@ type HelmProvider interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetAlias()
+	ResetBurstLimit()
 	ResetDebug()
 	ResetExperiments()
 	ResetHelmDriver()
@@ -110,6 +114,26 @@ func (j *jsiiProxy_HelmProvider) AliasInput() *string {
 	_jsii_.Get(
 		j,
 		"aliasInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_HelmProvider) BurstLimit() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"burstLimit",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_HelmProvider) BurstLimitInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"burstLimitInput",
 		&returns,
 	)
 	return returns
@@ -433,6 +457,14 @@ func (j *jsiiProxy_HelmProvider)SetAlias(val *string) {
 	)
 }
 
+func (j *jsiiProxy_HelmProvider)SetBurstLimit(val *float64) {
+	_jsii_.Set(
+		j,
+		"burstLimit",
+		val,
+	)
+}
+
 func (j *jsiiProxy_HelmProvider)SetDebug(val interface{}) {
 	if err := j.validateSetDebugParameters(val); err != nil {
 		panic(err)
@@ -627,6 +659,14 @@ func (h *jsiiProxy_HelmProvider) ResetAlias() {
 	_jsii_.InvokeVoid(
 		h,
 		"resetAlias",
+		nil, // no parameters
+	)
+}
+
+func (h *jsiiProxy_HelmProvider) ResetBurstLimit() {
+	_jsii_.InvokeVoid(
+		h,
+		"resetBurstLimit",
 		nil, // no parameters
 	)
 }

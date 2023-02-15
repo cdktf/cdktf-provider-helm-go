@@ -29,6 +29,9 @@ type DataHelmTemplate interface {
 	Count() *float64
 	// Experimental.
 	SetCount(val *float64)
+	Crds() *[]*string
+	SetCrds(val *[]*string)
+	CrdsInput() *[]*string
 	CreateNamespace() interface{}
 	SetCreateNamespace(val interface{})
 	CreateNamespaceInput() interface{}
@@ -206,6 +209,7 @@ type DataHelmTemplate interface {
 	PutSetString(value interface{})
 	ResetApiVersions()
 	ResetAtomic()
+	ResetCrds()
 	ResetCreateNamespace()
 	ResetDependencyUpdate()
 	ResetDescription()
@@ -348,6 +352,26 @@ func (j *jsiiProxy_DataHelmTemplate) Count() *float64 {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHelmTemplate) Crds() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"crds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHelmTemplate) CrdsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"crdsInput",
 		&returns,
 	)
 	return returns
@@ -1334,6 +1358,17 @@ func (j *jsiiProxy_DataHelmTemplate)SetCount(val *float64) {
 	)
 }
 
+func (j *jsiiProxy_DataHelmTemplate)SetCrds(val *[]*string) {
+	if err := j.validateSetCrdsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"crds",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataHelmTemplate)SetCreateNamespace(val interface{}) {
 	if err := j.validateSetCreateNamespaceParameters(val); err != nil {
 		panic(err)
@@ -2087,6 +2122,14 @@ func (d *jsiiProxy_DataHelmTemplate) ResetAtomic() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetAtomic",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataHelmTemplate) ResetCrds() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetCrds",
 		nil, // no parameters
 	)
 }
