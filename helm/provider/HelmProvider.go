@@ -2,14 +2,14 @@ package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v5/provider/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v6/provider/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/helm helm}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs helm}.
 type HelmProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -420,7 +420,7 @@ func (j *jsiiProxy_HelmProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/helm helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs helm} Resource.
 func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProviderConfig) HelmProvider {
 	_init_.Initialize()
 
@@ -438,7 +438,7 @@ func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProvide
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/helm helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs helm} Resource.
 func NewHelmProvider_Override(h HelmProvider, scope constructs.Construct, id *string, config *HelmProviderConfig) {
 	_init_.Initialize()
 

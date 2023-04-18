@@ -1,9 +1,9 @@
-module github.com/cdktf/cdktf-provider-helm-go/helm/v5
+module github.com/cdktf/cdktf-provider-helm-go/helm/v6
 
 go 1.18
 
 require (
-	github.com/aws/jsii-runtime-go v1.75.0
-	github.com/hashicorp/terraform-cdk-go/cdktf v0.15.4
-	github.com/aws/constructs-go/constructs/v10 v10.1.251
+	github.com/aws/jsii-runtime-go v1.80.0
+	github.com/hashicorp/terraform-cdk-go/cdktf v0.16.0
+	github.com/aws/constructs-go/constructs/v10 v10.1.314
 )

@@ -92,6 +92,10 @@ func (j *jsiiProxy_Release) validateSetConnectionParameters(val interface{}) err
 	return nil
 }
 
+func (j *jsiiProxy_Release) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Release) validateSetCreateNamespaceParameters(val interface{}) error {
 	return nil
 }

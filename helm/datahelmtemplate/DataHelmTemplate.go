@@ -2,14 +2,14 @@ package datahelmtemplate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v5/datahelmtemplate/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v6/datahelmtemplate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/helm/d/template helm_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/data-sources/template helm_template}.
 type DataHelmTemplate interface {
 	cdktf.TerraformDataSource
 	ApiVersions() *[]*string
@@ -26,9 +26,9 @@ type DataHelmTemplate interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Crds() *[]*string
 	SetCrds(val *[]*string)
 	CrdsInput() *[]*string
@@ -347,8 +347,8 @@ func (j *jsiiProxy_DataHelmTemplate) ConstructNodeMetadata() *map[string]interfa
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplate) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataHelmTemplate) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -1288,7 +1288,7 @@ func (j *jsiiProxy_DataHelmTemplate) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/helm/d/template helm_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/data-sources/template helm_template} Data Source.
 func NewDataHelmTemplate(scope constructs.Construct, id *string, config *DataHelmTemplateConfig) DataHelmTemplate {
 	_init_.Initialize()
 
@@ -1306,7 +1306,7 @@ func NewDataHelmTemplate(scope constructs.Construct, id *string, config *DataHel
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/helm/d/template helm_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/data-sources/template helm_template} Data Source.
 func NewDataHelmTemplate_Override(d DataHelmTemplate, scope constructs.Construct, id *string, config *DataHelmTemplateConfig) {
 	_init_.Initialize()
 
@@ -1350,7 +1350,10 @@ func (j *jsiiProxy_DataHelmTemplate)SetChart(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplate)SetCount(val *float64) {
+func (j *jsiiProxy_DataHelmTemplate)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

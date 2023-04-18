@@ -2,14 +2,14 @@ package release
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v5/release/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v6/release/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/helm/r/release helm_release}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release helm_release}.
 type Release interface {
 	cdktf.TerraformResource
 	Atomic() interface{}
@@ -30,9 +30,9 @@ type Release interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	CreateNamespace() interface{}
 	SetCreateNamespace(val interface{})
 	CreateNamespaceInput() interface{}
@@ -348,8 +348,8 @@ func (j *jsiiProxy_Release) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Release) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Release) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -1229,7 +1229,7 @@ func (j *jsiiProxy_Release) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/helm/r/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release helm_release} Resource.
 func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) Release {
 	_init_.Initialize()
 
@@ -1247,7 +1247,7 @@ func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) R
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/helm/r/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release helm_release} Resource.
 func NewRelease_Override(r Release, scope constructs.Construct, id *string, config *ReleaseConfig) {
 	_init_.Initialize()
 
@@ -1302,7 +1302,10 @@ func (j *jsiiProxy_Release)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Release)SetCount(val *float64) {
+func (j *jsiiProxy_Release)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",
