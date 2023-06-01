@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release helm_release}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release helm_release}.
 type Release interface {
 	cdktf.TerraformResource
 	Atomic() interface{}
@@ -145,6 +145,8 @@ type Release interface {
 	ReuseValuesInput() interface{}
 	Set() ReleaseSetList
 	SetInput() interface{}
+	SetList() ReleaseSetListStructList
+	SetListInput() interface{}
 	SetSensitive() ReleaseSetSensitiveList
 	SetSensitiveInput() interface{}
 	SkipCrds() interface{}
@@ -202,6 +204,7 @@ type Release interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutPostrender(value *ReleasePostrender)
 	PutSet(value interface{})
+	PutSetList(value interface{})
 	PutSetSensitive(value interface{})
 	ResetAtomic()
 	ResetCleanupOnFail()
@@ -235,6 +238,7 @@ type Release interface {
 	ResetResetValues()
 	ResetReuseValues()
 	ResetSet()
+	ResetSetList()
 	ResetSetSensitive()
 	ResetSkipCrds()
 	ResetTfValues()
@@ -1028,6 +1032,26 @@ func (j *jsiiProxy_Release) SetInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Release) SetList() ReleaseSetListStructList {
+	var returns ReleaseSetListStructList
+	_jsii_.Get(
+		j,
+		"setList",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) SetListInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"setListInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Release) SetSensitive() ReleaseSetSensitiveList {
 	var returns ReleaseSetSensitiveList
 	_jsii_.Get(
@@ -1229,7 +1253,7 @@ func (j *jsiiProxy_Release) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release helm_release} Resource.
 func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) Release {
 	_init_.Initialize()
 
@@ -1247,7 +1271,7 @@ func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) R
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release helm_release} Resource.
 func NewRelease_Override(r Release, scope constructs.Construct, id *string, config *ReleaseConfig) {
 	_init_.Initialize()
 
@@ -2010,6 +2034,17 @@ func (r *jsiiProxy_Release) PutSet(value interface{}) {
 	)
 }
 
+func (r *jsiiProxy_Release) PutSetList(value interface{}) {
+	if err := r.validatePutSetListParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putSetList",
+		[]interface{}{value},
+	)
+}
+
 func (r *jsiiProxy_Release) PutSetSensitive(value interface{}) {
 	if err := r.validatePutSetSensitiveParameters(value); err != nil {
 		panic(err)
@@ -2257,6 +2292,14 @@ func (r *jsiiProxy_Release) ResetSet() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetSet",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Release) ResetSetList() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSetList",
 		nil, // no parameters
 	)
 }

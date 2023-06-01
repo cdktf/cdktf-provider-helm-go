@@ -77,6 +77,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
 			_jsii_.MemberMethod{JsiiMethod: "putPostrender", GoMethod: "PutPostrender"},
 			_jsii_.MemberMethod{JsiiMethod: "putSet", GoMethod: "PutSet"},
+			_jsii_.MemberMethod{JsiiMethod: "putSetList", GoMethod: "PutSetList"},
 			_jsii_.MemberMethod{JsiiMethod: "putSetSensitive", GoMethod: "PutSetSensitive"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberProperty{JsiiProperty: "recreatePods", GoGetter: "RecreatePods"},
@@ -127,6 +128,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetResetValues", GoMethod: "ResetResetValues"},
 			_jsii_.MemberMethod{JsiiMethod: "resetReuseValues", GoMethod: "ResetReuseValues"},
 			_jsii_.MemberMethod{JsiiMethod: "resetSet", GoMethod: "ResetSet"},
+			_jsii_.MemberMethod{JsiiMethod: "resetSetList", GoMethod: "ResetSetList"},
 			_jsii_.MemberMethod{JsiiMethod: "resetSetSensitive", GoMethod: "ResetSetSensitive"},
 			_jsii_.MemberMethod{JsiiMethod: "resetSkipCrds", GoMethod: "ResetSkipCrds"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTfValues", GoMethod: "ResetTfValues"},
@@ -141,6 +143,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "reuseValuesInput", GoGetter: "ReuseValuesInput"},
 			_jsii_.MemberProperty{JsiiProperty: "set", GoGetter: "Set"},
 			_jsii_.MemberProperty{JsiiProperty: "setInput", GoGetter: "SetInput"},
+			_jsii_.MemberProperty{JsiiProperty: "setList", GoGetter: "SetList"},
+			_jsii_.MemberProperty{JsiiProperty: "setListInput", GoGetter: "SetListInput"},
 			_jsii_.MemberProperty{JsiiProperty: "setSensitive", GoGetter: "SetSensitive"},
 			_jsii_.MemberProperty{JsiiProperty: "setSensitiveInput", GoGetter: "SetSensitiveInput"},
 			_jsii_.MemberProperty{JsiiProperty: "skipCrds", GoGetter: "SkipCrds"},
@@ -302,6 +306,67 @@ func init() {
 		func() interface{} {
 			j := jsiiProxy_ReleaseSetList{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-helm.release.ReleaseSetListStruct",
+		reflect.TypeOf((*ReleaseSetListStruct)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-helm.release.ReleaseSetListStructList",
+		reflect.TypeOf((*ReleaseSetListStructList)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "get", GoMethod: "Get"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "wrapsSet", GoGetter: "WrapsSet"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ReleaseSetListStructList{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-helm.release.ReleaseSetListStructOutputReference",
+		reflect.TypeOf((*ReleaseSetListStructOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "nameInput", GoGetter: "NameInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "value", GoGetter: "Value"},
+			_jsii_.MemberProperty{JsiiProperty: "valueInput", GoGetter: "ValueInput"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ReleaseSetListStructOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},
 	)

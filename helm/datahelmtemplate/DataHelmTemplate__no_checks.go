@@ -60,6 +60,10 @@ func (d *jsiiProxy_DataHelmTemplate) validatePutSetParameters(value interface{})
 	return nil
 }
 
+func (d *jsiiProxy_DataHelmTemplate) validatePutSetListParameters(value interface{}) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataHelmTemplate) validatePutSetSensitiveParameters(value interface{}) error {
 	return nil
 }

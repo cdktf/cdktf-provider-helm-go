@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/data-sources/template helm_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/data-sources/template helm_template}.
 type DataHelmTemplate interface {
 	cdktf.TerraformDataSource
 	ApiVersions() *[]*string
@@ -141,6 +141,8 @@ type DataHelmTemplate interface {
 	ReuseValuesInput() interface{}
 	Set() DataHelmTemplateSetList
 	SetInput() interface{}
+	SetList() DataHelmTemplateSetListStructList
+	SetListInput() interface{}
 	SetSensitive() DataHelmTemplateSetSensitiveList
 	SetSensitiveInput() interface{}
 	SetString() DataHelmTemplateSetStringList
@@ -205,6 +207,7 @@ type DataHelmTemplate interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutPostrender(value *DataHelmTemplatePostrender)
 	PutSet(value interface{})
+	PutSetList(value interface{})
 	PutSetSensitive(value interface{})
 	PutSetString(value interface{})
 	ResetApiVersions()
@@ -241,6 +244,7 @@ type DataHelmTemplate interface {
 	ResetResetValues()
 	ResetReuseValues()
 	ResetSet()
+	ResetSetList()
 	ResetSetSensitive()
 	ResetSetString()
 	ResetShowOnly()
@@ -1037,6 +1041,26 @@ func (j *jsiiProxy_DataHelmTemplate) SetInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataHelmTemplate) SetList() DataHelmTemplateSetListStructList {
+	var returns DataHelmTemplateSetListStructList
+	_jsii_.Get(
+		j,
+		"setList",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHelmTemplate) SetListInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"setListInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataHelmTemplate) SetSensitive() DataHelmTemplateSetSensitiveList {
 	var returns DataHelmTemplateSetSensitiveList
 	_jsii_.Get(
@@ -1288,7 +1312,7 @@ func (j *jsiiProxy_DataHelmTemplate) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/data-sources/template helm_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/data-sources/template helm_template} Data Source.
 func NewDataHelmTemplate(scope constructs.Construct, id *string, config *DataHelmTemplateConfig) DataHelmTemplate {
 	_init_.Initialize()
 
@@ -1306,7 +1330,7 @@ func NewDataHelmTemplate(scope constructs.Construct, id *string, config *DataHel
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/data-sources/template helm_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/data-sources/template helm_template} Data Source.
 func NewDataHelmTemplate_Override(d DataHelmTemplate, scope constructs.Construct, id *string, config *DataHelmTemplateConfig) {
 	_init_.Initialize()
 
@@ -2091,6 +2115,17 @@ func (d *jsiiProxy_DataHelmTemplate) PutSet(value interface{}) {
 	)
 }
 
+func (d *jsiiProxy_DataHelmTemplate) PutSetList(value interface{}) {
+	if err := d.validatePutSetListParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putSetList",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DataHelmTemplate) PutSetSensitive(value interface{}) {
 	if err := d.validatePutSetSensitiveParameters(value); err != nil {
 		panic(err)
@@ -2365,6 +2400,14 @@ func (d *jsiiProxy_DataHelmTemplate) ResetSet() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetSet",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataHelmTemplate) ResetSetList() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetSetList",
 		nil, // no parameters
 	)
 }

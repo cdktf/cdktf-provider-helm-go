@@ -60,6 +60,10 @@ func (r *jsiiProxy_Release) validatePutSetParameters(value interface{}) error {
 	return nil
 }
 
+func (r *jsiiProxy_Release) validatePutSetListParameters(value interface{}) error {
+	return nil
+}
+
 func (r *jsiiProxy_Release) validatePutSetSensitiveParameters(value interface{}) error {
 	return nil
 }
