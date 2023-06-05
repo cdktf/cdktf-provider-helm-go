@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release helm_release}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release helm_release}.
 type Release interface {
 	cdktf.TerraformResource
 	Atomic() interface{}
@@ -1253,7 +1253,7 @@ func (j *jsiiProxy_Release) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release helm_release} Resource.
 func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) Release {
 	_init_.Initialize()
 
@@ -1271,7 +1271,7 @@ func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) R
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release helm_release} Resource.
 func NewRelease_Override(r Release, scope constructs.Construct, id *string, config *ReleaseConfig) {
 	_init_.Initialize()
 
