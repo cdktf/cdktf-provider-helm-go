@@ -1,3 +1,6 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 //go:build !no_runtime_type_checking
 
 package datahelmtemplate
@@ -165,6 +168,8 @@ func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetComplexO
 
 func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
 	case *DataHelmTemplateSetString:
 		val := val.(*DataHelmTemplateSetString)
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
@@ -176,11 +181,9 @@ func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetInternal
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 			return err
 		}
-	case cdktf.IResolvable:
-		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *DataHelmTemplateSetString, cdktf.IResolvable; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *DataHelmTemplateSetString; received %#v (a %T)", val, val)
 		}
 	}
 
