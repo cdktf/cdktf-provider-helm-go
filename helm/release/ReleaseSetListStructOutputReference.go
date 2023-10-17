@@ -5,9 +5,9 @@ package release
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v9/jsii"
 
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v8/release/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v9/release/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

@@ -5,14 +5,14 @@ package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v8/provider/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v9/provider/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs helm}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.11.0/docs helm}.
 type HelmProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -423,7 +423,7 @@ func (j *jsiiProxy_HelmProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.11.0/docs helm} Resource.
 func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProviderConfig) HelmProvider {
 	_init_.Initialize()
 
@@ -441,7 +441,7 @@ func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProvide
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.11.0/docs helm} Resource.
 func NewHelmProvider_Override(h HelmProvider, scope constructs.Construct, id *string, config *HelmProviderConfig) {
 	_init_.Initialize()
 
@@ -550,6 +550,25 @@ func (j *jsiiProxy_HelmProvider)SetRepositoryConfigPath(val *string) {
 		"repositoryConfigPath",
 		val,
 	)
+}
+
+// Generates CDKTF code for importing a HelmProvider resource upon running "cdktf plan <stack-name>".
+func HelmProvider_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateHelmProvider_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-helm.provider.HelmProvider",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
 }
 
 // Checks if `x` is a construct.

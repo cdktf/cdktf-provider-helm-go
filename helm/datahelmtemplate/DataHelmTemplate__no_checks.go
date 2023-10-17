@@ -75,6 +75,10 @@ func (d *jsiiProxy_DataHelmTemplate) validatePutSetStringParameters(value interf
 	return nil
 }
 
+func validateDataHelmTemplate_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataHelmTemplate_IsConstructParameters(x interface{}) error {
 	return nil
 }

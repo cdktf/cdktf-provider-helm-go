@@ -5,14 +5,14 @@ package datahelmtemplate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v8/datahelmtemplate/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v9/datahelmtemplate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/data-sources/template helm_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.11.0/docs/data-sources/template helm_template}.
 type DataHelmTemplate interface {
 	cdktf.TerraformDataSource
 	ApiVersions() *[]*string
@@ -1315,7 +1315,7 @@ func (j *jsiiProxy_DataHelmTemplate) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/data-sources/template helm_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.11.0/docs/data-sources/template helm_template} Data Source.
 func NewDataHelmTemplate(scope constructs.Construct, id *string, config *DataHelmTemplateConfig) DataHelmTemplate {
 	_init_.Initialize()
 
@@ -1333,7 +1333,7 @@ func NewDataHelmTemplate(scope constructs.Construct, id *string, config *DataHel
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/data-sources/template helm_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.11.0/docs/data-sources/template helm_template} Data Source.
 func NewDataHelmTemplate_Override(d DataHelmTemplate, scope constructs.Construct, id *string, config *DataHelmTemplateConfig) {
 	_init_.Initialize()
 
@@ -1828,6 +1828,25 @@ func (j *jsiiProxy_DataHelmTemplate)SetWait(val interface{}) {
 		"wait",
 		val,
 	)
+}
+
+// Generates CDKTF code for importing a DataHelmTemplate resource upon running "cdktf plan <stack-name>".
+func DataHelmTemplate_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateDataHelmTemplate_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
 }
 
 // Checks if `x` is a construct.

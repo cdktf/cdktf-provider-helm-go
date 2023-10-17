@@ -7,6 +7,10 @@ package release
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_Release) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Release) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (r *jsiiProxy_Release) validateGetStringMapAttributeParameters(terraformAtt
 	return nil
 }
 
+func (r *jsiiProxy_Release) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Release) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (r *jsiiProxy_Release) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -68,6 +80,10 @@ func (r *jsiiProxy_Release) validatePutSetListParameters(value interface{}) erro
 }
 
 func (r *jsiiProxy_Release) validatePutSetSensitiveParameters(value interface{}) error {
+	return nil
+}
+
+func validateRelease_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 
