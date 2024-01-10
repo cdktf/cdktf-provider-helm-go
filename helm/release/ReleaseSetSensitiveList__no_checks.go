@@ -7,6 +7,10 @@ package release
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_ReleaseSetSensitiveList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_ReleaseSetSensitiveList) validateGetParameters(index *float64) error {
 	return nil
 }
