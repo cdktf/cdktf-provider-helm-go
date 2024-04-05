@@ -1,12 +1,15 @@
-# CDKTF Go bindings for hashicorp/helm provider version 2.12.1
+# CDKTF Go bindings for hashicorp/helm provider version 2.13.0
 
-This repo builds and publishes the [Terraform helm provider](https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform helm provider](https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Go Package
 
 The go package is generated into the [`github.com/cdktf/cdktf-provider-helm-go`](https://github.com/cdktf/cdktf-provider-helm-go) package.
 
-`go get github.com/cdktf/cdktf-provider-helm-go/helm`
+`go get github.com/cdktf/cdktf-provider-helm-go/helm/<version>`
+
+Where `<version>` is the version of the prebuilt provider you would like to use e.g. `v11`. The full module name can be found
+within the [go.mod](https://github.com/cdktf/cdktf-provider-helm-go/blob/main/helm/go.mod#L1) file.
 
 ## Docs
 
@@ -20,7 +23,7 @@ This project is explicitly not tracking the Terraform helm provider version 1:1.
 These are the upstream dependencies:
 
 * [CDK for Terraform](https://cdk.tf)
-* [Terraform helm provider](https://registry.terraform.io/providers/hashicorp/helm/2.12.1)
+* [Terraform helm provider](https://registry.terraform.io/providers/hashicorp/helm/2.13.0)
 * [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
