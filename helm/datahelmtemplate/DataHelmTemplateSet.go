@@ -5,11 +5,11 @@ package datahelmtemplate
 
 
 type DataHelmTemplateSet struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.2/docs/data-sources/template#name DataHelmTemplate#name}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#name DataHelmTemplate#name}.
 	Name *string `field:"required" json:"name" yaml:"name"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.2/docs/data-sources/template#value DataHelmTemplate#value}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#value DataHelmTemplate#value}.
 	Value *string `field:"required" json:"value" yaml:"value"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.2/docs/data-sources/template#type DataHelmTemplate#type}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#type DataHelmTemplate#type}.
 	Type *string `field:"optional" json:"type" yaml:"type"`
 }
 

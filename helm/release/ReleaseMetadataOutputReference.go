@@ -30,12 +30,15 @@ type ReleaseMetadataOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	FirstDeployed() *float64
 	// Experimental.
 	Fqn() *string
 	InternalValue() *ReleaseMetadata
 	SetInternalValue(val *ReleaseMetadata)
+	LastDeployed() *float64
 	Name() *string
 	Namespace() *string
+	Notes() *string
 	Revision() *float64
 	// Experimental.
 	TerraformAttribute() *string
@@ -136,6 +139,16 @@ func (j *jsiiProxy_ReleaseMetadataOutputReference) CreationStack() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_ReleaseMetadataOutputReference) FirstDeployed() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"firstDeployed",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ReleaseMetadataOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -156,6 +169,16 @@ func (j *jsiiProxy_ReleaseMetadataOutputReference) InternalValue() *ReleaseMetad
 	return returns
 }
 
+func (j *jsiiProxy_ReleaseMetadataOutputReference) LastDeployed() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"lastDeployed",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ReleaseMetadataOutputReference) Name() *string {
 	var returns *string
 	_jsii_.Get(
@@ -171,6 +194,16 @@ func (j *jsiiProxy_ReleaseMetadataOutputReference) Namespace() *string {
 	_jsii_.Get(
 		j,
 		"namespace",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ReleaseMetadataOutputReference) Notes() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"notes",
 		&returns,
 	)
 	return returns
