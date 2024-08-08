@@ -24,186 +24,192 @@ type DataHelmTemplateConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Chart name to be installed. A path may be used.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#chart DataHelmTemplate#chart}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#chart DataHelmTemplate#chart}
 	Chart *string `field:"required" json:"chart" yaml:"chart"`
 	// Release name.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#name DataHelmTemplate#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#name DataHelmTemplate#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Kubernetes api versions used for Capabilities.APIVersions.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#api_versions DataHelmTemplate#api_versions}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#api_versions DataHelmTemplate#api_versions}
 	ApiVersions *[]*string `field:"optional" json:"apiVersions" yaml:"apiVersions"`
-	// If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
+	// If set, installation process purges chart on fail.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#atomic DataHelmTemplate#atomic}
+	// The wait flag will be set automatically if atomic is used. Defaults to `false`.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#atomic DataHelmTemplate#atomic}
 	Atomic interface{} `field:"optional" json:"atomic" yaml:"atomic"`
 	// List of rendered CRDs from the chart.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#crds DataHelmTemplate#crds}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#crds DataHelmTemplate#crds}
 	Crds *[]*string `field:"optional" json:"crds" yaml:"crds"`
-	// Create the namespace if it does not exist.
+	// Create the namespace if it does not exist. Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#create_namespace DataHelmTemplate#create_namespace}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#create_namespace DataHelmTemplate#create_namespace}
 	CreateNamespace interface{} `field:"optional" json:"createNamespace" yaml:"createNamespace"`
-	// Run helm dependency update before installing the chart.
+	// Run helm dependency update before installing the chart. Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#dependency_update DataHelmTemplate#dependency_update}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#dependency_update DataHelmTemplate#dependency_update}
 	DependencyUpdate interface{} `field:"optional" json:"dependencyUpdate" yaml:"dependencyUpdate"`
 	// Add a custom description.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#description DataHelmTemplate#description}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#description DataHelmTemplate#description}
 	Description *string `field:"optional" json:"description" yaml:"description"`
 	// Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#devel DataHelmTemplate#devel}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#devel DataHelmTemplate#devel}
 	Devel interface{} `field:"optional" json:"devel" yaml:"devel"`
-	// If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
+	// If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#disable_openapi_validation DataHelmTemplate#disable_openapi_validation}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#disable_openapi_validation DataHelmTemplate#disable_openapi_validation}
 	DisableOpenapiValidation interface{} `field:"optional" json:"disableOpenapiValidation" yaml:"disableOpenapiValidation"`
-	// Prevent hooks from running.
+	// Prevent hooks from running.Defaults to `300` seconds.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#disable_webhooks DataHelmTemplate#disable_webhooks}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#disable_webhooks DataHelmTemplate#disable_webhooks}
 	DisableWebhooks interface{} `field:"optional" json:"disableWebhooks" yaml:"disableWebhooks"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#id DataHelmTemplate#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#id DataHelmTemplate#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// Include CRDs in the templated output.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#include_crds DataHelmTemplate#include_crds}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#include_crds DataHelmTemplate#include_crds}
 	IncludeCrds interface{} `field:"optional" json:"includeCrds" yaml:"includeCrds"`
 	// Set .Release.IsUpgrade instead of .Release.IsInstall.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#is_upgrade DataHelmTemplate#is_upgrade}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#is_upgrade DataHelmTemplate#is_upgrade}
 	IsUpgrade interface{} `field:"optional" json:"isUpgrade" yaml:"isUpgrade"`
-	// Location of public keys used for verification. Used only if `verify` is true.
+	// Location of public keys used for verification.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#keyring DataHelmTemplate#keyring}
+	// Used only if `verify` is true. Defaults to `/.gnupg/pubring.gpg` in the location set by `home`.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#keyring DataHelmTemplate#keyring}
 	Keyring *string `field:"optional" json:"keyring" yaml:"keyring"`
 	// Kubernetes version used for Capabilities.KubeVersion.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#kube_version DataHelmTemplate#kube_version}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#kube_version DataHelmTemplate#kube_version}
 	KubeVersion *string `field:"optional" json:"kubeVersion" yaml:"kubeVersion"`
 	// Concatenated rendered chart templates. This corresponds to the output of the `helm template` command.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#manifest DataHelmTemplate#manifest}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#manifest DataHelmTemplate#manifest}
 	Manifest *string `field:"optional" json:"manifest" yaml:"manifest"`
 	// Map of rendered chart templates indexed by the template name.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#manifests DataHelmTemplate#manifests}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#manifests DataHelmTemplate#manifests}
 	Manifests *map[string]*string `field:"optional" json:"manifests" yaml:"manifests"`
-	// Namespace to install the release into.
+	// Namespace to install the release into. Defaults to `default`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#namespace DataHelmTemplate#namespace}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#namespace DataHelmTemplate#namespace}
 	Namespace *string `field:"optional" json:"namespace" yaml:"namespace"`
 	// Rendered notes if the chart contains a `NOTES.txt`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#notes DataHelmTemplate#notes}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#notes DataHelmTemplate#notes}
 	Notes *string `field:"optional" json:"notes" yaml:"notes"`
-	// Pass credentials to all domains.
+	// Pass credentials to all domains. Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#pass_credentials DataHelmTemplate#pass_credentials}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#pass_credentials DataHelmTemplate#pass_credentials}
 	PassCredentials interface{} `field:"optional" json:"passCredentials" yaml:"passCredentials"`
 	// postrender block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#postrender DataHelmTemplate#postrender}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#postrender DataHelmTemplate#postrender}
 	Postrender *DataHelmTemplatePostrender `field:"optional" json:"postrender" yaml:"postrender"`
-	// If set, render subchart notes along with the parent.
+	// If set, render subchart notes along with the parent. Defaults to `true`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#render_subchart_notes DataHelmTemplate#render_subchart_notes}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#render_subchart_notes DataHelmTemplate#render_subchart_notes}
 	RenderSubchartNotes interface{} `field:"optional" json:"renderSubchartNotes" yaml:"renderSubchartNotes"`
-	// Re-use the given name, even if that name is already used. This is unsafe in production.
+	// Re-use the given name, even if that name is already used. This is unsafe in production. Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#replace DataHelmTemplate#replace}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#replace DataHelmTemplate#replace}
 	Replace interface{} `field:"optional" json:"replace" yaml:"replace"`
 	// Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#repository DataHelmTemplate#repository}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#repository DataHelmTemplate#repository}
 	Repository *string `field:"optional" json:"repository" yaml:"repository"`
 	// The Repositories CA File.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#repository_ca_file DataHelmTemplate#repository_ca_file}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#repository_ca_file DataHelmTemplate#repository_ca_file}
 	RepositoryCaFile *string `field:"optional" json:"repositoryCaFile" yaml:"repositoryCaFile"`
 	// The repositories cert file.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#repository_cert_file DataHelmTemplate#repository_cert_file}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#repository_cert_file DataHelmTemplate#repository_cert_file}
 	RepositoryCertFile *string `field:"optional" json:"repositoryCertFile" yaml:"repositoryCertFile"`
 	// The repositories cert key file.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#repository_key_file DataHelmTemplate#repository_key_file}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#repository_key_file DataHelmTemplate#repository_key_file}
 	RepositoryKeyFile *string `field:"optional" json:"repositoryKeyFile" yaml:"repositoryKeyFile"`
 	// Password for HTTP basic authentication.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#repository_password DataHelmTemplate#repository_password}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#repository_password DataHelmTemplate#repository_password}
 	RepositoryPassword *string `field:"optional" json:"repositoryPassword" yaml:"repositoryPassword"`
 	// Username for HTTP basic authentication.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#repository_username DataHelmTemplate#repository_username}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#repository_username DataHelmTemplate#repository_username}
 	RepositoryUsername *string `field:"optional" json:"repositoryUsername" yaml:"repositoryUsername"`
-	// When upgrading, reset the values to the ones built into the chart.
+	// When upgrading, reset the values to the ones built into the chart.Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#reset_values DataHelmTemplate#reset_values}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#reset_values DataHelmTemplate#reset_values}
 	ResetValues interface{} `field:"optional" json:"resetValues" yaml:"resetValues"`
-	// When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
+	// When upgrading, reuse the last release's values and merge in any overrides.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#reuse_values DataHelmTemplate#reuse_values}
+	// If 'reset_values' is specified, this is ignored. Defaults to `false`.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#reuse_values DataHelmTemplate#reuse_values}
 	ReuseValues interface{} `field:"optional" json:"reuseValues" yaml:"reuseValues"`
 	// set block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#set DataHelmTemplate#set}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#set DataHelmTemplate#set}
 	Set interface{} `field:"optional" json:"set" yaml:"set"`
 	// set_list block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#set_list DataHelmTemplate#set_list}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#set_list DataHelmTemplate#set_list}
 	SetList interface{} `field:"optional" json:"setList" yaml:"setList"`
 	// set_sensitive block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#set_sensitive DataHelmTemplate#set_sensitive}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#set_sensitive DataHelmTemplate#set_sensitive}
 	SetSensitive interface{} `field:"optional" json:"setSensitive" yaml:"setSensitive"`
 	// set_string block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#set_string DataHelmTemplate#set_string}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#set_string DataHelmTemplate#set_string}
 	SetString interface{} `field:"optional" json:"setString" yaml:"setString"`
 	// Only show manifests rendered from the given templates.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#show_only DataHelmTemplate#show_only}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#show_only DataHelmTemplate#show_only}
 	ShowOnly *[]*string `field:"optional" json:"showOnly" yaml:"showOnly"`
-	// If set, no CRDs will be installed. By default, CRDs are installed if not already present.
+	// If set, no CRDs will be installed. By default, CRDs are installed if not already present. Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#skip_crds DataHelmTemplate#skip_crds}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#skip_crds DataHelmTemplate#skip_crds}
 	SkipCrds interface{} `field:"optional" json:"skipCrds" yaml:"skipCrds"`
-	// If set, tests will not be rendered. By default, tests are rendered.
+	// If set, tests will not be rendered. By default, tests are rendered. Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#skip_tests DataHelmTemplate#skip_tests}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#skip_tests DataHelmTemplate#skip_tests}
 	SkipTests interface{} `field:"optional" json:"skipTests" yaml:"skipTests"`
-	// Time in seconds to wait for any individual kubernetes operation.
+	// Time in seconds to wait for any individual kubernetes operation. Defaults to `300` seconds.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#timeout DataHelmTemplate#timeout}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#timeout DataHelmTemplate#timeout}
 	Timeout *float64 `field:"optional" json:"timeout" yaml:"timeout"`
 	// Validate your manifests against the Kubernetes cluster you are currently pointing at.
 	//
 	// This is the same validation performed on an install
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#validate DataHelmTemplate#validate}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#validate DataHelmTemplate#validate}
 	Validate interface{} `field:"optional" json:"validate" yaml:"validate"`
 	// List of values in raw yaml format to pass to helm.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#values DataHelmTemplate#values}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#values DataHelmTemplate#values}
 	Values *[]*string `field:"optional" json:"values" yaml:"values"`
-	// Verify the package before installing it.
+	// Verify the package before installing it.Defaults to `false`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#verify DataHelmTemplate#verify}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#verify DataHelmTemplate#verify}
 	Verify interface{} `field:"optional" json:"verify" yaml:"verify"`
 	// Specify the exact chart version to install. If this is not specified, the latest version is installed.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#version DataHelmTemplate#version}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#version DataHelmTemplate#version}
 	Version *string `field:"optional" json:"version" yaml:"version"`
-	// Will wait until all resources are in a ready state before marking the release as successful.
+	// Will wait until all resources are in a ready state before marking the release as successful.Defaults to `true`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.0/docs/data-sources/template#wait DataHelmTemplate#wait}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/data-sources/template#wait DataHelmTemplate#wait}
 	Wait interface{} `field:"optional" json:"wait" yaml:"wait"`
 }
 
