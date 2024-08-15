@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/resources/release helm_release}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.15.0/docs/resources/release helm_release}.
 type Release interface {
 	cdktf.TerraformResource
 	Atomic() interface{}
@@ -165,6 +165,9 @@ type Release interface {
 	Timeout() *float64
 	SetTimeout(val *float64)
 	TimeoutInput() *float64
+	UpgradeInstall() interface{}
+	SetUpgradeInstall(val interface{})
+	UpgradeInstallInput() interface{}
 	Values() *[]*string
 	SetValues(val *[]*string)
 	ValuesInput() *[]*string
@@ -264,6 +267,7 @@ type Release interface {
 	ResetSkipCrds()
 	ResetTfValues()
 	ResetTimeout()
+	ResetUpgradeInstall()
 	ResetVerify()
 	ResetVersion()
 	ResetWait()
@@ -1176,6 +1180,26 @@ func (j *jsiiProxy_Release) TimeoutInput() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_Release) UpgradeInstall() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"upgradeInstall",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) UpgradeInstallInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"upgradeInstallInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Release) Values() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -1277,7 +1301,7 @@ func (j *jsiiProxy_Release) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.15.0/docs/resources/release helm_release} Resource.
 func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) Release {
 	_init_.Initialize()
 
@@ -1295,7 +1319,7 @@ func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) R
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.14.1/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.15.0/docs/resources/release helm_release} Resource.
 func NewRelease_Override(r Release, scope constructs.Construct, id *string, config *ReleaseConfig) {
 	_init_.Initialize()
 
@@ -1711,6 +1735,17 @@ func (j *jsiiProxy_Release)SetTimeout(val *float64) {
 	_jsii_.Set(
 		j,
 		"timeout",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Release)SetUpgradeInstall(val interface{}) {
+	if err := j.validateSetUpgradeInstallParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"upgradeInstall",
 		val,
 	)
 }
@@ -2443,6 +2478,14 @@ func (r *jsiiProxy_Release) ResetTimeout() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetTimeout",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Release) ResetUpgradeInstall() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetUpgradeInstall",
 		nil, // no parameters
 	)
 }

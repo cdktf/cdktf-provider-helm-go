@@ -247,6 +247,10 @@ func (j *jsiiProxy_Release) validateSetTimeoutParameters(val *float64) error {
 	return nil
 }
 
+func (j *jsiiProxy_Release) validateSetUpgradeInstallParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Release) validateSetValuesParameters(val *[]*string) error {
 	return nil
 }
