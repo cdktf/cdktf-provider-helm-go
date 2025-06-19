@@ -71,7 +71,7 @@ func (j *jsiiProxy_ReleaseMetadataOutputReference) validateSetTerraformResourceP
 	return nil
 }
 
-func validateNewReleaseMetadataOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
+func validateNewReleaseMetadataOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
 	return nil
 }
 

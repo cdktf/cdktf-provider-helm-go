@@ -5,9 +5,9 @@ package datahelmtemplate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v12/jsii"
 
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v11/datahelmtemplate/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v12/datahelmtemplate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -70,6 +70,7 @@ type DataHelmTemplateSetListStructOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -484,6 +485,14 @@ func (d *jsiiProxy_DataHelmTemplateSetListStructOutputReference) InterpolationFo
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DataHelmTemplateSetListStructOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DataHelmTemplateSetListStructOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

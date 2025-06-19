@@ -3,7 +3,7 @@
 
 //go:build !no_runtime_type_checking
 
-package datahelmtemplate
+package release
 
 import (
 	"fmt"
@@ -13,7 +13,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (d *jsiiProxy_DataHelmTemplateSetStringList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+func (r *jsiiProxy_ReleaseSetWoList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
 	if mapKeyAttributeName == nil {
 		return fmt.Errorf("parameter mapKeyAttributeName is required, but nil was provided")
 	}
@@ -21,7 +21,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringList) validateAllWithMapKeyParameter
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringList) validateGetParameters(index *float64) error {
+func (r *jsiiProxy_ReleaseSetWoList) validateGetParameters(index *float64) error {
 	if index == nil {
 		return fmt.Errorf("parameter index is required, but nil was provided")
 	}
@@ -29,7 +29,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringList) validateGetParameters(index *f
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (r *jsiiProxy_ReleaseSetWoList) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
 	}
@@ -37,19 +37,19 @@ func (d *jsiiProxy_DataHelmTemplateSetStringList) validateResolveParameters(_con
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) validateSetInternalValueParameters(val interface{}) error {
+func (j *jsiiProxy_ReleaseSetWoList) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
 	case cdktf.IResolvable:
 		// ok
-	case *[]*DataHelmTemplateSetString:
-		val := val.(*[]*DataHelmTemplateSetString)
+	case *[]*ReleaseSetWo:
+		val := val.(*[]*ReleaseSetWo)
 		for idx_97dfc6, v := range *val {
 			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
 				return err
 			}
 		}
-	case []*DataHelmTemplateSetString:
-		val_ := val.([]*DataHelmTemplateSetString)
+	case []*ReleaseSetWo:
+		val_ := val.([]*ReleaseSetWo)
 		val := &val_
 		for idx_97dfc6, v := range *val {
 			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
@@ -58,14 +58,14 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) validateSetInternalValueParame
 		}
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*DataHelmTemplateSetString; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*ReleaseSetWo; received %#v (a %T)", val, val)
 		}
 	}
 
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) validateSetTerraformAttributeParameters(val *string) error {
+func (j *jsiiProxy_ReleaseSetWoList) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -73,7 +73,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) validateSetTerraformAttributeP
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+func (j *jsiiProxy_ReleaseSetWoList) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -81,7 +81,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) validateSetTerraformResourcePa
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) validateSetWrapsSetParameters(val *bool) error {
+func (j *jsiiProxy_ReleaseSetWoList) validateSetWrapsSetParameters(val *bool) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -89,7 +89,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) validateSetWrapsSetParameters(
 	return nil
 }
 
-func validateNewDataHelmTemplateSetStringListParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) error {
+func validateNewReleaseSetWoListParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}

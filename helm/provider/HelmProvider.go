@@ -5,14 +5,14 @@ package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v11/provider/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs helm}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs helm}.
 type HelmProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -50,12 +50,12 @@ type HelmProvider interface {
 	PluginsPathInput() *string
 	// Experimental.
 	RawOverrides() interface{}
-	Registry() interface{}
-	SetRegistry(val interface{})
+	Registries() interface{}
+	SetRegistries(val interface{})
+	RegistriesInput() interface{}
 	RegistryConfigPath() *string
 	SetRegistryConfigPath(val *string)
 	RegistryConfigPathInput() *string
-	RegistryInput() interface{}
 	RepositoryCache() *string
 	SetRepositoryCache(val *string)
 	RepositoryCacheInput() *string
@@ -83,7 +83,7 @@ type HelmProvider interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPluginsPath()
-	ResetRegistry()
+	ResetRegistries()
 	ResetRegistryConfigPath()
 	ResetRepositoryCache()
 	ResetRepositoryConfigPath()
@@ -315,11 +315,21 @@ func (j *jsiiProxy_HelmProvider) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_HelmProvider) Registry() interface{} {
+func (j *jsiiProxy_HelmProvider) Registries() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
-		"registry",
+		"registries",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_HelmProvider) RegistriesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"registriesInput",
 		&returns,
 	)
 	return returns
@@ -340,16 +350,6 @@ func (j *jsiiProxy_HelmProvider) RegistryConfigPathInput() *string {
 	_jsii_.Get(
 		j,
 		"registryConfigPathInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_HelmProvider) RegistryInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"registryInput",
 		&returns,
 	)
 	return returns
@@ -426,7 +426,7 @@ func (j *jsiiProxy_HelmProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs helm} Resource.
 func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProviderConfig) HelmProvider {
 	_init_.Initialize()
 
@@ -444,7 +444,7 @@ func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProvide
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs helm} Resource.
 func NewHelmProvider_Override(h HelmProvider, scope constructs.Construct, id *string, config *HelmProviderConfig) {
 	_init_.Initialize()
 
@@ -520,13 +520,13 @@ func (j *jsiiProxy_HelmProvider)SetPluginsPath(val *string) {
 	)
 }
 
-func (j *jsiiProxy_HelmProvider)SetRegistry(val interface{}) {
-	if err := j.validateSetRegistryParameters(val); err != nil {
+func (j *jsiiProxy_HelmProvider)SetRegistries(val interface{}) {
+	if err := j.validateSetRegistriesParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"registry",
+		"registries",
 		val,
 	)
 }
@@ -744,10 +744,10 @@ func (h *jsiiProxy_HelmProvider) ResetPluginsPath() {
 	)
 }
 
-func (h *jsiiProxy_HelmProvider) ResetRegistry() {
+func (h *jsiiProxy_HelmProvider) ResetRegistries() {
 	_jsii_.InvokeVoid(
 		h,
-		"resetRegistry",
+		"resetRegistries",
 		nil, // no parameters
 	)
 }

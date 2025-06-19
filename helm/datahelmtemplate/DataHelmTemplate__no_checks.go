@@ -71,10 +71,6 @@ func (d *jsiiProxy_DataHelmTemplate) validatePutSetSensitiveParameters(value int
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplate) validatePutSetStringParameters(value interface{}) error {
-	return nil
-}
-
 func validateDataHelmTemplate_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -132,10 +128,6 @@ func (j *jsiiProxy_DataHelmTemplate) validateSetDisableOpenapiValidationParamete
 }
 
 func (j *jsiiProxy_DataHelmTemplate) validateSetDisableWebhooksParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_DataHelmTemplate) validateSetIdParameters(val *string) error {
 	return nil
 }
 

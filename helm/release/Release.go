@@ -5,14 +5,14 @@ package release
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v11/release/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v12/release/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release helm_release}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release helm_release}.
 type Release interface {
 	cdktf.TerraformResource
 	Atomic() interface{}
@@ -73,8 +73,6 @@ type Release interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	Keyring() *string
 	SetKeyring(val *string)
 	KeyringInput() *string
@@ -89,7 +87,7 @@ type Release interface {
 	MaxHistory() *float64
 	SetMaxHistory(val *float64)
 	MaxHistoryInput() *float64
-	Metadata() ReleaseMetadataList
+	Metadata() ReleaseMetadataOutputReference
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -102,7 +100,7 @@ type Release interface {
 	SetPassCredentials(val interface{})
 	PassCredentialsInput() interface{}
 	Postrender() ReleasePostrenderOutputReference
-	PostrenderInput() *ReleasePostrender
+	PostrenderInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -152,6 +150,11 @@ type Release interface {
 	SetListInput() interface{}
 	SetSensitive() ReleaseSetSensitiveList
 	SetSensitiveInput() interface{}
+	SetWo() ReleaseSetWoList
+	SetWoInput() interface{}
+	SetWoRevision() *float64
+	SetSetWoRevision(val *float64)
+	SetWoRevisionInput() *float64
 	SkipCrds() interface{}
 	SetSkipCrds(val interface{})
 	SkipCrdsInput() interface{}
@@ -165,9 +168,6 @@ type Release interface {
 	Timeout() *float64
 	SetTimeout(val *float64)
 	TimeoutInput() *float64
-	UpgradeInstall() interface{}
-	SetUpgradeInstall(val interface{})
-	UpgradeInstallInput() interface{}
 	Values() *[]*string
 	SetValues(val *[]*string)
 	ValuesInput() *[]*string
@@ -230,6 +230,7 @@ type Release interface {
 	PutSet(value interface{})
 	PutSetList(value interface{})
 	PutSetSensitive(value interface{})
+	PutSetWo(value interface{})
 	ResetAtomic()
 	ResetCleanupOnFail()
 	ResetCreateNamespace()
@@ -240,7 +241,6 @@ type Release interface {
 	ResetDisableOpenapiValidation()
 	ResetDisableWebhooks()
 	ResetForceUpdate()
-	ResetId()
 	ResetKeyring()
 	ResetLint()
 	ResetMaxHistory()
@@ -264,10 +264,11 @@ type Release interface {
 	ResetSet()
 	ResetSetList()
 	ResetSetSensitive()
+	ResetSetWo()
+	ResetSetWoRevision()
 	ResetSkipCrds()
 	ResetTfValues()
 	ResetTimeout()
-	ResetUpgradeInstall()
 	ResetVerify()
 	ResetVersion()
 	ResetWait()
@@ -600,16 +601,6 @@ func (j *jsiiProxy_Release) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Release) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Release) Keyring() *string {
 	var returns *string
 	_jsii_.Get(
@@ -690,8 +681,8 @@ func (j *jsiiProxy_Release) MaxHistoryInput() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_Release) Metadata() ReleaseMetadataList {
-	var returns ReleaseMetadataList
+func (j *jsiiProxy_Release) Metadata() ReleaseMetadataOutputReference {
+	var returns ReleaseMetadataOutputReference
 	_jsii_.Get(
 		j,
 		"metadata",
@@ -780,8 +771,8 @@ func (j *jsiiProxy_Release) Postrender() ReleasePostrenderOutputReference {
 	return returns
 }
 
-func (j *jsiiProxy_Release) PostrenderInput() *ReleasePostrender {
-	var returns *ReleasePostrender
+func (j *jsiiProxy_Release) PostrenderInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"postrenderInput",
@@ -1100,6 +1091,46 @@ func (j *jsiiProxy_Release) SetSensitiveInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Release) SetWo() ReleaseSetWoList {
+	var returns ReleaseSetWoList
+	_jsii_.Get(
+		j,
+		"setWo",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) SetWoInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"setWoInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) SetWoRevision() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"setWoRevision",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) SetWoRevisionInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"setWoRevisionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Release) SkipCrds() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -1175,26 +1206,6 @@ func (j *jsiiProxy_Release) TimeoutInput() *float64 {
 	_jsii_.Get(
 		j,
 		"timeoutInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Release) UpgradeInstall() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"upgradeInstall",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Release) UpgradeInstallInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"upgradeInstallInput",
 		&returns,
 	)
 	return returns
@@ -1301,7 +1312,7 @@ func (j *jsiiProxy_Release) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release helm_release} Resource.
 func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) Release {
 	_init_.Initialize()
 
@@ -1319,7 +1330,7 @@ func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) R
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release helm_release} Resource.
 func NewRelease_Override(r Release, scope constructs.Construct, id *string, config *ReleaseConfig) {
 	_init_.Initialize()
 
@@ -1485,17 +1496,6 @@ func (j *jsiiProxy_Release)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Release)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1717,6 +1717,17 @@ func (j *jsiiProxy_Release)SetReuseValues(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Release)SetSetWoRevision(val *float64) {
+	if err := j.validateSetSetWoRevisionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"setWoRevision",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Release)SetSkipCrds(val interface{}) {
 	if err := j.validateSetSkipCrdsParameters(val); err != nil {
 		panic(err)
@@ -1735,17 +1746,6 @@ func (j *jsiiProxy_Release)SetTimeout(val *float64) {
 	_jsii_.Set(
 		j,
 		"timeout",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Release)SetUpgradeInstall(val interface{}) {
-	if err := j.validateSetUpgradeInstallParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"upgradeInstall",
 		val,
 	)
 }
@@ -2202,6 +2202,17 @@ func (r *jsiiProxy_Release) PutSetSensitive(value interface{}) {
 	)
 }
 
+func (r *jsiiProxy_Release) PutSetWo(value interface{}) {
+	if err := r.validatePutSetWoParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putSetWo",
+		[]interface{}{value},
+	)
+}
+
 func (r *jsiiProxy_Release) ResetAtomic() {
 	_jsii_.InvokeVoid(
 		r,
@@ -2278,14 +2289,6 @@ func (r *jsiiProxy_Release) ResetForceUpdate() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetForceUpdate",
-		nil, // no parameters
-	)
-}
-
-func (r *jsiiProxy_Release) ResetId() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetId",
 		nil, // no parameters
 	)
 }
@@ -2458,6 +2461,22 @@ func (r *jsiiProxy_Release) ResetSetSensitive() {
 	)
 }
 
+func (r *jsiiProxy_Release) ResetSetWo() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSetWo",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Release) ResetSetWoRevision() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSetWoRevision",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_Release) ResetSkipCrds() {
 	_jsii_.InvokeVoid(
 		r,
@@ -2478,14 +2497,6 @@ func (r *jsiiProxy_Release) ResetTimeout() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetTimeout",
-		nil, // no parameters
-	)
-}
-
-func (r *jsiiProxy_Release) ResetUpgradeInstall() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetUpgradeInstall",
 		nil, // no parameters
 	)
 }

@@ -37,10 +37,10 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "pluginsPath", GoGetter: "PluginsPath"},
 			_jsii_.MemberProperty{JsiiProperty: "pluginsPathInput", GoGetter: "PluginsPathInput"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
-			_jsii_.MemberProperty{JsiiProperty: "registry", GoGetter: "Registry"},
+			_jsii_.MemberProperty{JsiiProperty: "registries", GoGetter: "Registries"},
+			_jsii_.MemberProperty{JsiiProperty: "registriesInput", GoGetter: "RegistriesInput"},
 			_jsii_.MemberProperty{JsiiProperty: "registryConfigPath", GoGetter: "RegistryConfigPath"},
 			_jsii_.MemberProperty{JsiiProperty: "registryConfigPathInput", GoGetter: "RegistryConfigPathInput"},
-			_jsii_.MemberProperty{JsiiProperty: "registryInput", GoGetter: "RegistryInput"},
 			_jsii_.MemberProperty{JsiiProperty: "repositoryCache", GoGetter: "RepositoryCache"},
 			_jsii_.MemberProperty{JsiiProperty: "repositoryCacheInput", GoGetter: "RepositoryCacheInput"},
 			_jsii_.MemberProperty{JsiiProperty: "repositoryConfigPath", GoGetter: "RepositoryConfigPath"},
@@ -53,7 +53,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetKubernetes", GoMethod: "ResetKubernetes"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPluginsPath", GoMethod: "ResetPluginsPath"},
-			_jsii_.MemberMethod{JsiiMethod: "resetRegistry", GoMethod: "ResetRegistry"},
+			_jsii_.MemberMethod{JsiiMethod: "resetRegistries", GoMethod: "ResetRegistries"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRegistryConfigPath", GoMethod: "ResetRegistryConfigPath"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRepositoryCache", GoMethod: "ResetRepositoryCache"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRepositoryConfigPath", GoMethod: "ResetRepositoryConfigPath"},
@@ -90,7 +90,7 @@ func init() {
 		reflect.TypeOf((*HelmProviderKubernetesExec)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-helm.provider.HelmProviderRegistry",
-		reflect.TypeOf((*HelmProviderRegistry)(nil)).Elem(),
+		"@cdktf/provider-helm.provider.HelmProviderRegistries",
+		reflect.TypeOf((*HelmProviderRegistries)(nil)).Elem(),
 	)
 }

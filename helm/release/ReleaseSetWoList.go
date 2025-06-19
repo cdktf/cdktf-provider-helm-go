@@ -1,17 +1,17 @@
 // Copyright (c) HashiCorp, Inc.
 // SPDX-License-Identifier: MPL-2.0
 
-package datahelmtemplate
+package release
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v12/jsii"
 
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v11/datahelmtemplate/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v12/release/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type DataHelmTemplateSetStringList interface {
+type ReleaseSetWoList interface {
 	cdktf.ComplexList
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
@@ -38,7 +38,7 @@ type DataHelmTemplateSetStringList interface {
 	AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator
 	// Experimental.
 	ComputeFqn() *string
-	Get(index *float64) DataHelmTemplateSetStringOutputReference
+	Get(index *float64) ReleaseSetWoOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -49,12 +49,12 @@ type DataHelmTemplateSetStringList interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for DataHelmTemplateSetStringList
-type jsiiProxy_DataHelmTemplateSetStringList struct {
+// The jsii proxy struct for ReleaseSetWoList
+type jsiiProxy_ReleaseSetWoList struct {
 	internal.Type__cdktfComplexList
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) CreationStack() *[]*string {
+func (j *jsiiProxy_ReleaseSetWoList) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -64,7 +64,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) CreationStack() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) Fqn() *string {
+func (j *jsiiProxy_ReleaseSetWoList) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -74,7 +74,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) InternalValue() interface{} {
+func (j *jsiiProxy_ReleaseSetWoList) InternalValue() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -84,7 +84,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) InternalValue() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) TerraformAttribute() *string {
+func (j *jsiiProxy_ReleaseSetWoList) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -94,7 +94,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) TerraformAttribute() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_ReleaseSetWoList) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -104,7 +104,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) TerraformResource() cdktf.IInt
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList) WrapsSet() *bool {
+func (j *jsiiProxy_ReleaseSetWoList) WrapsSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -115,16 +115,16 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList) WrapsSet() *bool {
 }
 
 
-func NewDataHelmTemplateSetStringList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataHelmTemplateSetStringList {
+func NewReleaseSetWoList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ReleaseSetWoList {
 	_init_.Initialize()
 
-	if err := validateNewDataHelmTemplateSetStringListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+	if err := validateNewReleaseSetWoListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_DataHelmTemplateSetStringList{}
+	j := jsiiProxy_ReleaseSetWoList{}
 
 	_jsii_.Create(
-		"@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList",
+		"@cdktf/provider-helm.release.ReleaseSetWoList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
 		&j,
 	)
@@ -132,17 +132,17 @@ func NewDataHelmTemplateSetStringList(terraformResource cdktf.IInterpolatingPare
 	return &j
 }
 
-func NewDataHelmTemplateSetStringList_Override(d DataHelmTemplateSetStringList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
+func NewReleaseSetWoList_Override(r ReleaseSetWoList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList",
+		"@cdktf/provider-helm.release.ReleaseSetWoList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
-		d,
+		r,
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ReleaseSetWoList)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -153,7 +153,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList)SetInternalValue(val interface{
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ReleaseSetWoList)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -164,7 +164,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList)SetTerraformAttribute(val *stri
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ReleaseSetWoList)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -175,7 +175,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList)SetTerraformResource(val cdktf.
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringList)SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ReleaseSetWoList)SetWrapsSet(val *bool) {
 	if err := j.validateSetWrapsSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -186,14 +186,14 @@ func (j *jsiiProxy_DataHelmTemplateSetStringList)SetWrapsSet(val *bool) {
 	)
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringList) AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator {
-	if err := d.validateAllWithMapKeyParameters(mapKeyAttributeName); err != nil {
+func (r *jsiiProxy_ReleaseSetWoList) AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator {
+	if err := r.validateAllWithMapKeyParameters(mapKeyAttributeName); err != nil {
 		panic(err)
 	}
 	var returns cdktf.DynamicListTerraformIterator
 
 	_jsii_.Invoke(
-		d,
+		r,
 		"allWithMapKey",
 		[]interface{}{mapKeyAttributeName},
 		&returns,
@@ -202,11 +202,11 @@ func (d *jsiiProxy_DataHelmTemplateSetStringList) AllWithMapKey(mapKeyAttributeN
 	return returns
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringList) ComputeFqn() *string {
+func (r *jsiiProxy_ReleaseSetWoList) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		r,
 		"computeFqn",
 		nil, // no parameters
 		&returns,
@@ -215,14 +215,14 @@ func (d *jsiiProxy_DataHelmTemplateSetStringList) ComputeFqn() *string {
 	return returns
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringList) Get(index *float64) DataHelmTemplateSetStringOutputReference {
-	if err := d.validateGetParameters(index); err != nil {
+func (r *jsiiProxy_ReleaseSetWoList) Get(index *float64) ReleaseSetWoOutputReference {
+	if err := r.validateGetParameters(index); err != nil {
 		panic(err)
 	}
-	var returns DataHelmTemplateSetStringOutputReference
+	var returns ReleaseSetWoOutputReference
 
 	_jsii_.Invoke(
-		d,
+		r,
 		"get",
 		[]interface{}{index},
 		&returns,
@@ -231,14 +231,14 @@ func (d *jsiiProxy_DataHelmTemplateSetStringList) Get(index *float64) DataHelmTe
 	return returns
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := d.validateResolveParameters(_context); err != nil {
+func (r *jsiiProxy_ReleaseSetWoList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
 
 	_jsii_.Invoke(
-		d,
+		r,
 		"resolve",
 		[]interface{}{_context},
 		&returns,
@@ -247,11 +247,11 @@ func (d *jsiiProxy_DataHelmTemplateSetStringList) Resolve(_context cdktf.IResolv
 	return returns
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringList) ToString() *string {
+func (r *jsiiProxy_ReleaseSetWoList) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		r,
 		"toString",
 		nil, // no parameters
 		&returns,

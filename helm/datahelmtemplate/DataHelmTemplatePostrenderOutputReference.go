@@ -5,14 +5,17 @@ package datahelmtemplate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v12/jsii"
 
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v11/datahelmtemplate/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v12/datahelmtemplate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
 type DataHelmTemplatePostrenderOutputReference interface {
 	cdktf.ComplexObject
+	Args() *[]*string
+	SetArgs(val *[]*string)
+	ArgsInput() *[]*string
 	BinaryPath() *string
 	SetBinaryPath(val *string)
 	BinaryPathInput() *string
@@ -33,8 +36,8 @@ type DataHelmTemplatePostrenderOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DataHelmTemplatePostrender
-	SetInternalValue(val *DataHelmTemplatePostrender)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +70,7 @@ type DataHelmTemplatePostrenderOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArgs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -80,6 +84,26 @@ type DataHelmTemplatePostrenderOutputReference interface {
 // The jsii proxy struct for DataHelmTemplatePostrenderOutputReference
 type jsiiProxy_DataHelmTemplatePostrenderOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) Args() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"args",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) ArgsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"argsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) BinaryPath() *string {
@@ -142,8 +166,8 @@ func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) InternalValue() *DataHelmTemplatePostrender {
-	var returns *DataHelmTemplatePostrender
+func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -200,6 +224,17 @@ func NewDataHelmTemplatePostrenderOutputReference_Override(d DataHelmTemplatePos
 	)
 }
 
+func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference)SetArgs(val *[]*string) {
+	if err := j.validateSetArgsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"args",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference)SetBinaryPath(val *string) {
 	if err := j.validateSetBinaryPathParameters(val); err != nil {
 		panic(err)
@@ -233,7 +268,7 @@ func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference)SetComplexObjectIsF
 	)
 }
 
-func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference)SetInternalValue(val *DataHelmTemplatePostrender) {
+func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -450,6 +485,14 @@ func (d *jsiiProxy_DataHelmTemplatePostrenderOutputReference) InterpolationForAt
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DataHelmTemplatePostrenderOutputReference) ResetArgs() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetArgs",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DataHelmTemplatePostrenderOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -5,14 +5,14 @@ package datahelmtemplate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v11/datahelmtemplate/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v12/datahelmtemplate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template helm_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template helm_template}.
 type DataHelmTemplate interface {
 	cdktf.TerraformDataSource
 	ApiVersions() *[]*string
@@ -66,8 +66,6 @@ type DataHelmTemplate interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	IncludeCrds() interface{}
 	SetIncludeCrds(val interface{})
 	IncludeCrdsInput() interface{}
@@ -105,7 +103,7 @@ type DataHelmTemplate interface {
 	SetPassCredentials(val interface{})
 	PassCredentialsInput() interface{}
 	Postrender() DataHelmTemplatePostrenderOutputReference
-	PostrenderInput() *DataHelmTemplatePostrender
+	PostrenderInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -148,8 +146,6 @@ type DataHelmTemplate interface {
 	SetListInput() interface{}
 	SetSensitive() DataHelmTemplateSetSensitiveList
 	SetSensitiveInput() interface{}
-	SetString() DataHelmTemplateSetStringList
-	SetStringInput() interface{}
 	ShowOnly() *[]*string
 	SetShowOnly(val *[]*string)
 	ShowOnlyInput() *[]*string
@@ -212,7 +208,6 @@ type DataHelmTemplate interface {
 	PutSet(value interface{})
 	PutSetList(value interface{})
 	PutSetSensitive(value interface{})
-	PutSetString(value interface{})
 	ResetApiVersions()
 	ResetAtomic()
 	ResetCrds()
@@ -222,7 +217,6 @@ type DataHelmTemplate interface {
 	ResetDevel()
 	ResetDisableOpenapiValidation()
 	ResetDisableWebhooks()
-	ResetId()
 	ResetIncludeCrds()
 	ResetIsUpgrade()
 	ResetKeyring()
@@ -249,7 +243,6 @@ type DataHelmTemplate interface {
 	ResetSet()
 	ResetSetList()
 	ResetSetSensitive()
-	ResetSetString()
 	ResetShowOnly()
 	ResetSkipCrds()
 	ResetSkipTests()
@@ -558,16 +551,6 @@ func (j *jsiiProxy_DataHelmTemplate) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplate) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataHelmTemplate) IncludeCrds() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -798,8 +781,8 @@ func (j *jsiiProxy_DataHelmTemplate) Postrender() DataHelmTemplatePostrenderOutp
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplate) PostrenderInput() *DataHelmTemplatePostrender {
-	var returns *DataHelmTemplatePostrender
+func (j *jsiiProxy_DataHelmTemplate) PostrenderInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"postrenderInput",
@@ -1088,26 +1071,6 @@ func (j *jsiiProxy_DataHelmTemplate) SetSensitiveInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataHelmTemplate) SetString() DataHelmTemplateSetStringList {
-	var returns DataHelmTemplateSetStringList
-	_jsii_.Get(
-		j,
-		"setString",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataHelmTemplate) SetStringInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"setStringInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataHelmTemplate) ShowOnly() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -1319,7 +1282,7 @@ func (j *jsiiProxy_DataHelmTemplate) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template helm_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template helm_template} Data Source.
 func NewDataHelmTemplate(scope constructs.Construct, id *string, config *DataHelmTemplateConfig) DataHelmTemplate {
 	_init_.Initialize()
 
@@ -1337,7 +1300,7 @@ func NewDataHelmTemplate(scope constructs.Construct, id *string, config *DataHel
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template helm_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template helm_template} Data Source.
 func NewDataHelmTemplate_Override(d DataHelmTemplate, scope constructs.Construct, id *string, config *DataHelmTemplateConfig) {
 	_init_.Initialize()
 
@@ -1481,17 +1444,6 @@ func (j *jsiiProxy_DataHelmTemplate)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataHelmTemplate)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -2163,17 +2115,6 @@ func (d *jsiiProxy_DataHelmTemplate) PutSetSensitive(value interface{}) {
 	)
 }
 
-func (d *jsiiProxy_DataHelmTemplate) PutSetString(value interface{}) {
-	if err := d.validatePutSetStringParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		d,
-		"putSetString",
-		[]interface{}{value},
-	)
-}
-
 func (d *jsiiProxy_DataHelmTemplate) ResetApiVersions() {
 	_jsii_.InvokeVoid(
 		d,
@@ -2242,14 +2183,6 @@ func (d *jsiiProxy_DataHelmTemplate) ResetDisableWebhooks() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetDisableWebhooks",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DataHelmTemplate) ResetId() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetId",
 		nil, // no parameters
 	)
 }
@@ -2442,14 +2375,6 @@ func (d *jsiiProxy_DataHelmTemplate) ResetSetSensitive() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetSetSensitive",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DataHelmTemplate) ResetSetString() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetSetString",
 		nil, // no parameters
 	)
 }

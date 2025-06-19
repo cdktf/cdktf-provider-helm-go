@@ -43,7 +43,7 @@ func (j *jsiiProxy_HelmProvider) validateSetKubernetesParameters(val *HelmProvid
 	return nil
 }
 
-func (j *jsiiProxy_HelmProvider) validateSetRegistryParameters(val interface{}) error {
+func (j *jsiiProxy_HelmProvider) validateSetRegistriesParameters(val interface{}) error {
 	return nil
 }
 

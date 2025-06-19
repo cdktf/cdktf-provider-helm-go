@@ -91,6 +91,10 @@ func (r *jsiiProxy_Release) validatePutSetSensitiveParameters(value interface{})
 	return nil
 }
 
+func (r *jsiiProxy_Release) validatePutSetWoParameters(value interface{}) error {
+	return nil
+}
+
 func validateRelease_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -156,10 +160,6 @@ func (j *jsiiProxy_Release) validateSetDisableWebhooksParameters(val interface{}
 }
 
 func (j *jsiiProxy_Release) validateSetForceUpdateParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_Release) validateSetIdParameters(val *string) error {
 	return nil
 }
 
@@ -239,15 +239,15 @@ func (j *jsiiProxy_Release) validateSetReuseValuesParameters(val interface{}) er
 	return nil
 }
 
+func (j *jsiiProxy_Release) validateSetSetWoRevisionParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Release) validateSetSkipCrdsParameters(val interface{}) error {
 	return nil
 }
 
 func (j *jsiiProxy_Release) validateSetTimeoutParameters(val *float64) error {
-	return nil
-}
-
-func (j *jsiiProxy_Release) validateSetUpgradeInstallParameters(val interface{}) error {
 	return nil
 }
 

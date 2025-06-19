@@ -5,9 +5,9 @@ package release
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v12/jsii"
 
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v11/release/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v12/release/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -36,8 +36,8 @@ type ReleasePostrenderOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ReleasePostrender
-	SetInternalValue(val *ReleasePostrender)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -166,8 +166,8 @@ func (j *jsiiProxy_ReleasePostrenderOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ReleasePostrenderOutputReference) InternalValue() *ReleasePostrender {
-	var returns *ReleasePostrender
+func (j *jsiiProxy_ReleasePostrenderOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -268,7 +268,7 @@ func (j *jsiiProxy_ReleasePostrenderOutputReference)SetComplexObjectIsFromSet(va
 	)
 }
 
-func (j *jsiiProxy_ReleasePostrenderOutputReference)SetInternalValue(val *ReleasePostrender) {
+func (j *jsiiProxy_ReleasePostrenderOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

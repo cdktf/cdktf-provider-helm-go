@@ -5,13 +5,21 @@ package provider
 
 
 type HelmProviderKubernetesExec struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#api_version HelmProvider#api_version}.
+	// API version for the exec plugin.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#api_version HelmProvider#api_version}
 	ApiVersion *string `field:"required" json:"apiVersion" yaml:"apiVersion"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#command HelmProvider#command}.
+	// Command to run for Kubernetes exec plugin.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#command HelmProvider#command}
 	Command *string `field:"required" json:"command" yaml:"command"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#args HelmProvider#args}.
+	// Arguments for the exec plugin.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#args HelmProvider#args}
 	Args *[]*string `field:"optional" json:"args" yaml:"args"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#env HelmProvider#env}.
+	// Environment variables for the exec plugin.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#env HelmProvider#env}
 	Env *map[string]*string `field:"optional" json:"env" yaml:"env"`
 }
 

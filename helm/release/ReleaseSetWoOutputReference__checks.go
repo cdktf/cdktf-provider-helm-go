@@ -3,7 +3,7 @@
 
 //go:build !no_runtime_type_checking
 
-package datahelmtemplate
+package release
 
 import (
 	"fmt"
@@ -13,7 +13,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -21,7 +21,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetAnyMapAt
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -29,7 +29,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetBooleanA
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -37,7 +37,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetBooleanM
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -45,7 +45,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetListAttr
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -53,7 +53,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetNumberAt
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -61,7 +61,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetNumberLi
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -69,7 +69,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetNumberMa
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -77,7 +77,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetStringAt
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -85,7 +85,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateGetStringMa
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateInterpolationForAttributeParameters(property *string) error {
 	if property == nil {
 		return fmt.Errorf("parameter property is required, but nil was provided")
 	}
@@ -93,7 +93,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateInterpolati
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (r *jsiiProxy_ReleaseSetWoOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
 	}
@@ -101,7 +101,7 @@ func (d *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateResolvePara
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+func (j *jsiiProxy_ReleaseSetWoOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	switch val.(type) {
 	case *string:
 		// ok
@@ -158,7 +158,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetComplexO
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+func (j *jsiiProxy_ReleaseSetWoOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -166,31 +166,31 @@ func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetComplexO
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetInternalValueParameters(val interface{}) error {
+func (j *jsiiProxy_ReleaseSetWoOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
 	case cdktf.IResolvable:
 		// ok
-	case *DataHelmTemplateSetString:
-		val := val.(*DataHelmTemplateSetString)
+	case *ReleaseSetWo:
+		val := val.(*ReleaseSetWo)
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 			return err
 		}
-	case DataHelmTemplateSetString:
-		val_ := val.(DataHelmTemplateSetString)
+	case ReleaseSetWo:
+		val_ := val.(ReleaseSetWo)
 		val := &val_
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 			return err
 		}
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *DataHelmTemplateSetString; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *ReleaseSetWo; received %#v (a %T)", val, val)
 		}
 	}
 
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetNameParameters(val *string) error {
+func (j *jsiiProxy_ReleaseSetWoOutputReference) validateSetNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -198,7 +198,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetNamePara
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+func (j *jsiiProxy_ReleaseSetWoOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -206,7 +206,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetTerrafor
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+func (j *jsiiProxy_ReleaseSetWoOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -214,7 +214,7 @@ func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetTerrafor
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetValueParameters(val *string) error {
+func (j *jsiiProxy_ReleaseSetWoOutputReference) validateSetTypeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -222,7 +222,15 @@ func (j *jsiiProxy_DataHelmTemplateSetStringOutputReference) validateSetValuePar
 	return nil
 }
 
-func validateNewDataHelmTemplateSetStringOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
+func (j *jsiiProxy_ReleaseSetWoOutputReference) validateSetValueParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateNewReleaseSetWoOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}

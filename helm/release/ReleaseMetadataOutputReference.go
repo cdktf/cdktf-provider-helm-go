@@ -5,9 +5,9 @@ package release
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-helm-go/helm/v12/jsii"
 
-	"github.com/cdktf/cdktf-provider-helm-go/helm/v11/release/internal"
+	"github.com/cdktf/cdktf-provider-helm-go/helm/v12/release/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -260,29 +260,29 @@ func (j *jsiiProxy_ReleaseMetadataOutputReference) Version() *string {
 }
 
 
-func NewReleaseMetadataOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) ReleaseMetadataOutputReference {
+func NewReleaseMetadataOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ReleaseMetadataOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewReleaseMetadataOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+	if err := validateNewReleaseMetadataOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_ReleaseMetadataOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-helm.release.ReleaseMetadataOutputReference",
-		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
+		[]interface{}{terraformResource, terraformAttribute},
 		&j,
 	)
 
 	return &j
 }
 
-func NewReleaseMetadataOutputReference_Override(r ReleaseMetadataOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
+func NewReleaseMetadataOutputReference_Override(r ReleaseMetadataOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-helm.release.ReleaseMetadataOutputReference",
-		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
+		[]interface{}{terraformResource, terraformAttribute},
 		r,
 	)
 }

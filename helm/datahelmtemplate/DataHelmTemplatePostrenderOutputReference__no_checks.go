@@ -51,6 +51,10 @@ func (d *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateResolvePar
 	return nil
 }
 
+func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetArgsParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetBinaryPathParameters(val *string) error {
 	return nil
 }
@@ -63,7 +67,7 @@ func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetComplex
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetInternalValueParameters(val *DataHelmTemplatePostrender) error {
+func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

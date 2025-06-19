@@ -67,7 +67,7 @@ func (j *jsiiProxy_ReleasePostrenderOutputReference) validateSetComplexObjectIsF
 	return nil
 }
 
-func (j *jsiiProxy_ReleasePostrenderOutputReference) validateSetInternalValueParameters(val *ReleasePostrender) error {
+func (j *jsiiProxy_ReleasePostrenderOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

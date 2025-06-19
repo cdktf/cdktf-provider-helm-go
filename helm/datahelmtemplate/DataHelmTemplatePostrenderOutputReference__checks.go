@@ -101,6 +101,14 @@ func (d *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateResolvePar
 	return nil
 }
 
+func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetArgsParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetBinaryPathParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -174,9 +182,25 @@ func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetComplex
 	return nil
 }
 
-func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetInternalValueParameters(val *DataHelmTemplatePostrender) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_DataHelmTemplatePostrenderOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *DataHelmTemplatePostrender:
+		val := val.(*DataHelmTemplatePostrender)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case DataHelmTemplatePostrender:
+		val_ := val.(DataHelmTemplatePostrender)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *DataHelmTemplatePostrender; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

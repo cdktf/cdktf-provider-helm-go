@@ -107,19 +107,19 @@ func (j *jsiiProxy_HelmProvider) validateSetKubernetesParameters(val *HelmProvid
 	return nil
 }
 
-func (j *jsiiProxy_HelmProvider) validateSetRegistryParameters(val interface{}) error {
+func (j *jsiiProxy_HelmProvider) validateSetRegistriesParameters(val interface{}) error {
 	switch val.(type) {
 	case cdktf.IResolvable:
 		// ok
-	case *[]*HelmProviderRegistry:
-		val := val.(*[]*HelmProviderRegistry)
+	case *[]*HelmProviderRegistries:
+		val := val.(*[]*HelmProviderRegistries)
 		for idx_97dfc6, v := range *val {
 			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
 				return err
 			}
 		}
-	case []*HelmProviderRegistry:
-		val_ := val.([]*HelmProviderRegistry)
+	case []*HelmProviderRegistries:
+		val_ := val.([]*HelmProviderRegistries)
 		val := &val_
 		for idx_97dfc6, v := range *val {
 			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
@@ -128,7 +128,7 @@ func (j *jsiiProxy_HelmProvider) validateSetRegistryParameters(val interface{}) 
 		}
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*HelmProviderRegistry; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*HelmProviderRegistries; received %#v (a %T)", val, val)
 		}
 	}
 
