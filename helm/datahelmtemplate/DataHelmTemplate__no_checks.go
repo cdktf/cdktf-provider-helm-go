@@ -71,6 +71,14 @@ func (d *jsiiProxy_DataHelmTemplate) validatePutSetSensitiveParameters(value int
 	return nil
 }
 
+func (d *jsiiProxy_DataHelmTemplate) validatePutSetWoParameters(value interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataHelmTemplate) validatePutTimeoutsParameters(value *DataHelmTemplateTimeouts) error {
+	return nil
+}
+
 func validateDataHelmTemplate_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

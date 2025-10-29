@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/resources/release helm_release}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release helm_release}.
 type Release interface {
 	cdktf.TerraformResource
 	Atomic() interface{}
@@ -141,6 +141,7 @@ type Release interface {
 	ResetValues() interface{}
 	SetResetValues(val interface{})
 	ResetValuesInput() interface{}
+	Resources() cdktf.StringMap
 	ReuseValues() interface{}
 	SetReuseValues(val interface{})
 	ReuseValuesInput() interface{}
@@ -159,6 +160,9 @@ type Release interface {
 	SetSkipCrds(val interface{})
 	SkipCrdsInput() interface{}
 	Status() *string
+	TakeOwnership() interface{}
+	SetTakeOwnership(val interface{})
+	TakeOwnershipInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -168,6 +172,11 @@ type Release interface {
 	Timeout() *float64
 	SetTimeout(val *float64)
 	TimeoutInput() *float64
+	Timeouts() ReleaseTimeoutsOutputReference
+	TimeoutsInput() interface{}
+	UpgradeInstall() interface{}
+	SetUpgradeInstall(val interface{})
+	UpgradeInstallInput() interface{}
 	Values() *[]*string
 	SetValues(val *[]*string)
 	ValuesInput() *[]*string
@@ -231,6 +240,7 @@ type Release interface {
 	PutSetList(value interface{})
 	PutSetSensitive(value interface{})
 	PutSetWo(value interface{})
+	PutTimeouts(value *ReleaseTimeouts)
 	ResetAtomic()
 	ResetCleanupOnFail()
 	ResetCreateNamespace()
@@ -267,8 +277,11 @@ type Release interface {
 	ResetSetWo()
 	ResetSetWoRevision()
 	ResetSkipCrds()
+	ResetTakeOwnership()
 	ResetTfValues()
 	ResetTimeout()
+	ResetTimeouts()
+	ResetUpgradeInstall()
 	ResetVerify()
 	ResetVersion()
 	ResetWait()
@@ -1011,6 +1024,16 @@ func (j *jsiiProxy_Release) ResetValuesInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Release) Resources() cdktf.StringMap {
+	var returns cdktf.StringMap
+	_jsii_.Get(
+		j,
+		"resources",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Release) ReuseValues() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -1161,6 +1184,26 @@ func (j *jsiiProxy_Release) Status() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Release) TakeOwnership() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"takeOwnership",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) TakeOwnershipInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"takeOwnershipInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Release) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -1206,6 +1249,46 @@ func (j *jsiiProxy_Release) TimeoutInput() *float64 {
 	_jsii_.Get(
 		j,
 		"timeoutInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) Timeouts() ReleaseTimeoutsOutputReference {
+	var returns ReleaseTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) UpgradeInstall() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"upgradeInstall",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Release) UpgradeInstallInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"upgradeInstallInput",
 		&returns,
 	)
 	return returns
@@ -1312,7 +1395,7 @@ func (j *jsiiProxy_Release) WaitInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release helm_release} Resource.
 func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) Release {
 	_init_.Initialize()
 
@@ -1330,7 +1413,7 @@ func NewRelease(scope constructs.Construct, id *string, config *ReleaseConfig) R
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/resources/release helm_release} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release helm_release} Resource.
 func NewRelease_Override(r Release, scope constructs.Construct, id *string, config *ReleaseConfig) {
 	_init_.Initialize()
 
@@ -1739,6 +1822,17 @@ func (j *jsiiProxy_Release)SetSkipCrds(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Release)SetTakeOwnership(val interface{}) {
+	if err := j.validateSetTakeOwnershipParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"takeOwnership",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Release)SetTimeout(val *float64) {
 	if err := j.validateSetTimeoutParameters(val); err != nil {
 		panic(err)
@@ -1746,6 +1840,17 @@ func (j *jsiiProxy_Release)SetTimeout(val *float64) {
 	_jsii_.Set(
 		j,
 		"timeout",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Release)SetUpgradeInstall(val interface{}) {
+	if err := j.validateSetUpgradeInstallParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"upgradeInstall",
 		val,
 	)
 }
@@ -2213,6 +2318,17 @@ func (r *jsiiProxy_Release) PutSetWo(value interface{}) {
 	)
 }
 
+func (r *jsiiProxy_Release) PutTimeouts(value *ReleaseTimeouts) {
+	if err := r.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (r *jsiiProxy_Release) ResetAtomic() {
 	_jsii_.InvokeVoid(
 		r,
@@ -2485,6 +2601,14 @@ func (r *jsiiProxy_Release) ResetSkipCrds() {
 	)
 }
 
+func (r *jsiiProxy_Release) ResetTakeOwnership() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTakeOwnership",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_Release) ResetTfValues() {
 	_jsii_.InvokeVoid(
 		r,
@@ -2497,6 +2621,22 @@ func (r *jsiiProxy_Release) ResetTimeout() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetTimeout",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Release) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTimeouts",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Release) ResetUpgradeInstall() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetUpgradeInstall",
 		nil, // no parameters
 	)
 }

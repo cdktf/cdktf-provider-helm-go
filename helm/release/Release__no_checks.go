@@ -95,6 +95,10 @@ func (r *jsiiProxy_Release) validatePutSetWoParameters(value interface{}) error 
 	return nil
 }
 
+func (r *jsiiProxy_Release) validatePutTimeoutsParameters(value *ReleaseTimeouts) error {
+	return nil
+}
+
 func validateRelease_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -247,7 +251,15 @@ func (j *jsiiProxy_Release) validateSetSkipCrdsParameters(val interface{}) error
 	return nil
 }
 
+func (j *jsiiProxy_Release) validateSetTakeOwnershipParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Release) validateSetTimeoutParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Release) validateSetUpgradeInstallParameters(val interface{}) error {
 	return nil
 }
 

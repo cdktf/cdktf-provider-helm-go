@@ -4,7 +4,7 @@
 package datahelmtemplate
 
 
-type DataHelmTemplateSetSensitive struct {
+type DataHelmTemplateSetWo struct {
 	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#name DataHelmTemplate#name}.
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#value DataHelmTemplate#value}.

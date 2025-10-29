@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs helm}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs helm}.
 type HelmProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -48,6 +48,9 @@ type HelmProvider interface {
 	PluginsPath() *string
 	SetPluginsPath(val *string)
 	PluginsPathInput() *string
+	Qps() *float64
+	SetQps(val *float64)
+	QpsInput() *float64
 	// Experimental.
 	RawOverrides() interface{}
 	Registries() interface{}
@@ -83,6 +86,7 @@ type HelmProvider interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPluginsPath()
+	ResetQps()
 	ResetRegistries()
 	ResetRegistryConfigPath()
 	ResetRepositoryCache()
@@ -305,6 +309,26 @@ func (j *jsiiProxy_HelmProvider) PluginsPathInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_HelmProvider) Qps() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"qps",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_HelmProvider) QpsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"qpsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_HelmProvider) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -426,7 +450,7 @@ func (j *jsiiProxy_HelmProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs helm} Resource.
 func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProviderConfig) HelmProvider {
 	_init_.Initialize()
 
@@ -444,7 +468,7 @@ func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProvide
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs helm} Resource.
 func NewHelmProvider_Override(h HelmProvider, scope constructs.Construct, id *string, config *HelmProviderConfig) {
 	_init_.Initialize()
 
@@ -516,6 +540,14 @@ func (j *jsiiProxy_HelmProvider)SetPluginsPath(val *string) {
 	_jsii_.Set(
 		j,
 		"pluginsPath",
+		val,
+	)
+}
+
+func (j *jsiiProxy_HelmProvider)SetQps(val *float64) {
+	_jsii_.Set(
+		j,
+		"qps",
 		val,
 	)
 }
@@ -740,6 +772,14 @@ func (h *jsiiProxy_HelmProvider) ResetPluginsPath() {
 	_jsii_.InvokeVoid(
 		h,
 		"resetPluginsPath",
+		nil, // no parameters
+	)
+}
+
+func (h *jsiiProxy_HelmProvider) ResetQps() {
+	_jsii_.InvokeVoid(
+		h,
+		"resetQps",
 		nil, // no parameters
 	)
 }
