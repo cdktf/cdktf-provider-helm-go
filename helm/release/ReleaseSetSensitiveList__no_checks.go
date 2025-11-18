@@ -15,7 +15,7 @@ func (r *jsiiProxy_ReleaseSetSensitiveList) validateGetParameters(index *float64
 	return nil
 }
 
-func (r *jsiiProxy_ReleaseSetSensitiveList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (r *jsiiProxy_ReleaseSetSensitiveList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

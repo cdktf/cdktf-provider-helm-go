@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataHelmTemplateSetWoList) validateGetParameters(index *float
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetWoList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataHelmTemplateSetWoList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs helm}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs helm}.
 type HelmProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -450,7 +450,7 @@ func (j *jsiiProxy_HelmProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs helm} Resource.
 func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProviderConfig) HelmProvider {
 	_init_.Initialize()
 
@@ -468,7 +468,7 @@ func NewHelmProvider(scope constructs.Construct, id *string, config *HelmProvide
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs helm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs helm} Resource.
 func NewHelmProvider_Override(h HelmProvider, scope constructs.Construct, id *string, config *HelmProviderConfig) {
 	_init_.Initialize()
 

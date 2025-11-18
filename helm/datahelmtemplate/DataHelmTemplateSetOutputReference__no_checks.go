@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataHelmTemplateSetOutputReference) validateGetStringMapAttri
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataHelmTemplateSetOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataHelmTemplateSetOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataHelmTemplateSetOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

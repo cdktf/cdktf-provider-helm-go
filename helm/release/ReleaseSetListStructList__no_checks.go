@@ -15,7 +15,7 @@ func (r *jsiiProxy_ReleaseSetListStructList) validateGetParameters(index *float6
 	return nil
 }
 
-func (r *jsiiProxy_ReleaseSetListStructList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (r *jsiiProxy_ReleaseSetListStructList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 
