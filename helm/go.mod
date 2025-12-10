@@ -1,3 +1,8 @@
+// Deprecated: HashiCorp is no longer publishing new versions of the prebuilt provider for helm.
+// Previously-published versions of this prebuilt provider will still continue to be available as installable Go modules,
+// but these will not be compatible with newer versions of CDK for Terraform and are not eligible for commercial support.
+// You can continue to use the helm provider in your CDK for Terraform projects with newer versions of CDKTF,
+// but you will need to generate the bindings locally. See https://cdk.tf/imports for details.
 module github.com/cdktf/cdktf-provider-helm-go/helm/v12
 
 go 1.23
